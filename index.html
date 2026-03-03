@@ -226,7 +226,7 @@ window.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- ── SHARED STATUS TOAST ── -->
-<div class="status-bar green" id="global-statusBar">✅ 13 month(s) loaded: SUMMARY, APR, MAY, JUNE, JULY, AUG, SEP, OCT, NOV, DEC, JAN, FEB, MAR</div>
+<div class="status-bar green" id="global-statusBar">✅ 13 month(s) loaded: SUMMARY, APR, MAY, JUNE, JULY, AUG, SEP, OCT, NOV, DEC, JAN 26, FEB 26, MAR 26</div>
 
 <!-- ══ MENU PAGE ══ -->
 <div id="menu-page" style="display: none;">
@@ -264,7 +264,7 @@ window.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- ══ DASHBOARD PAGES ══ -->
-<div id="building-dashboard" class="dashboard-page" style="display:none">
+<div id="building-dashboard" class="dashboard-page" style="display: none;">
 <!-- ── HIDDEN UPLOAD CORNER (only visible on hover) ── -->
 <div class="upload-trigger">
   <button class="upload-trigger-btn" onclick="document.getElementById('building-excelInput').click()">
@@ -311,11 +311,11 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP 2026</td>
-          <td id="building-bp-apr26">$ –</td><td id="building-bp-may26">$ –</td><td id="building-bp-jun26">$ –</td>
-          <td id="building-bp-jul26">$ –</td><td id="building-bp-aug26">$ –</td><td id="building-bp-sep26">$ –</td>
-          <td id="building-bp-oct26">$ –</td><td id="building-bp-nov26">$ –</td><td id="building-bp-dec26">$ –</td>
-          <td id="building-bp-jan27">$ –</td><td id="building-bp-feb27">$ –</td><td id="building-bp-mar27">$ –</td>
-          <td class="total-col bp" id="building-bp-total">$ –</td>
+          <td id="building-bp-apr26">$ –</td><td id="building-bp-may26">$ –</td><td id="building-bp-jun26">$ 7,000</td>
+          <td id="building-bp-jul26">$ 10,000</td><td id="building-bp-aug26">$ –</td><td id="building-bp-sep26">$ 17,000</td>
+          <td id="building-bp-oct26">$ –</td><td id="building-bp-nov26">$ –</td><td id="building-bp-dec26">$ 17,000</td>
+          <td id="building-bp-jan27">$ 17,000</td><td id="building-bp-feb27">$ –</td><td id="building-bp-mar27">$ 46,296</td>
+          <td class="total-col bp" id="building-bp-total">$ 114,296</td>
         </tr>
         <tr class="row-fc">
           <td>FC/ACTUAL</td>
@@ -327,10 +327,10 @@ window.addEventListener('DOMContentLoaded', function() {
         </tr>
         <tr class="row-pct">
           <td>PERCENTAGE</td>
-          <td id="building-pct-apr26">0%</td><td id="building-pct-may26">0%</td><td id="building-pct-jun26">0%</td>
-          <td id="building-pct-jul26">0%</td><td id="building-pct-aug26">0%</td><td id="building-pct-sep26">0%</td>
-          <td id="building-pct-oct26">0%</td><td id="building-pct-nov26">0%</td><td id="building-pct-dec26">0%</td>
-          <td id="building-pct-jan27">0%</td><td id="building-pct-feb27">0%</td><td id="building-pct-mar27">0%</td>
+          <td id="building-pct-apr26">–</td><td id="building-pct-may26">–</td><td id="building-pct-jun26">0%</td>
+          <td id="building-pct-jul26">0%</td><td id="building-pct-aug26">–</td><td id="building-pct-sep26">0%</td>
+          <td id="building-pct-oct26">–</td><td id="building-pct-nov26">–</td><td id="building-pct-dec26">0%</td>
+          <td id="building-pct-jan27">0%</td><td id="building-pct-feb27">–</td><td id="building-pct-mar27">0%</td>
           <td class="total-col pct" id="building-pct-total">–</td>
         </tr>
       </tbody>
@@ -361,8 +361,8 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP 2026</td>
-          <td id="building-bp-q1">$ –</td><td id="building-bp-q2">$ –</td><td id="building-bp-smt1">$ –</td>
-          <td id="building-bp-q3">$ –</td><td id="building-bp-q4">$ –</td><td id="building-bp-smt2">$ –</td>
+          <td id="building-bp-q1">$ 7,000</td><td id="building-bp-q2">$ 27,000</td><td id="building-bp-smt1">$ 34,000</td>
+          <td id="building-bp-q3">$ 17,000</td><td id="building-bp-q4">$ 63,296</td><td id="building-bp-smt2">$ 80,296</td>
           <td class="total-col bp" id="building-bp-total">$ 114,296</td>
         </tr>
         <tr class="row-fc">
@@ -398,28 +398,28 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP</td>
-          <td id="building-ytdbp-apr26">–</td><td id="building-ytdbp-may26">–</td><td id="building-ytdbp-jun26">–</td><td id="building-ytdbp-jul26">–</td>
-          <td id="building-ytdbp-aug26">–</td><td id="building-ytdbp-sep26">–</td><td id="building-ytdbp-oct26">–</td><td id="building-ytdbp-nov26">–</td>
-          <td id="building-ytdbp-dec26">–</td><td id="building-ytdbp-jan27">–</td><td id="building-ytdbp-feb27">–</td><td id="building-ytdbp-mar27">–</td>
+          <td id="building-ytdbp-apr26">0</td><td id="building-ytdbp-may26">0</td><td id="building-ytdbp-jun26">7,000</td><td id="building-ytdbp-jul26">17,000</td>
+          <td id="building-ytdbp-aug26">17,000</td><td id="building-ytdbp-sep26">34,000</td><td id="building-ytdbp-oct26">34,000</td><td id="building-ytdbp-nov26">34,000</td>
+          <td id="building-ytdbp-dec26">51,000</td><td id="building-ytdbp-jan27">68,000</td><td id="building-ytdbp-feb27">68,000</td><td id="building-ytdbp-mar27">114,296</td>
         </tr>
         <tr class="row-fc">
           <td>ACTUAL</td>
-          <td id="building-ytd-apr26">–</td><td id="building-ytd-may26">–</td><td id="building-ytd-jun26">–</td><td id="building-ytd-jul26">–</td>
-          <td id="building-ytd-aug26">–</td><td id="building-ytd-sep26">–</td><td id="building-ytd-oct26">–</td><td id="building-ytd-nov26">–</td>
-          <td id="building-ytd-dec26">–</td><td id="building-ytd-jan27">–</td><td id="building-ytd-feb27">–</td><td id="building-ytd-mar27">–</td>
+          <td id="building-ytd-apr26">0</td><td id="building-ytd-may26">0</td><td id="building-ytd-jun26">0</td><td id="building-ytd-jul26">0</td>
+          <td id="building-ytd-aug26">0</td><td id="building-ytd-sep26">0</td><td id="building-ytd-oct26">0</td><td id="building-ytd-nov26">0</td>
+          <td id="building-ytd-dec26">0</td><td id="building-ytd-jan27">0</td><td id="building-ytd-feb27">0</td><td id="building-ytd-mar27">0</td>
         </tr>
         <tr class="row-pct">
           <td>PERCENTAGE</td>
-          <td id="building-var-apr26">–</td><td id="building-var-may26">–</td><td id="building-var-jun26">–</td><td id="building-var-jul26">–</td>
-          <td id="building-var-aug26">–</td><td id="building-var-sep26">–</td><td id="building-var-oct26">–</td><td id="building-var-nov26">–</td>
-          <td id="building-var-dec26">–</td><td id="building-var-jan27">–</td><td id="building-var-feb27">–</td><td id="building-var-mar27">–</td>
+          <td id="building-var-apr26">–</td><td id="building-var-may26">–</td><td id="building-var-jun26">0%</td><td id="building-var-jul26">0%</td>
+          <td id="building-var-aug26">0%</td><td id="building-var-sep26">0%</td><td id="building-var-oct26">0%</td><td id="building-var-nov26">0%</td>
+          <td id="building-var-dec26">0%</td><td id="building-var-jan27">0%</td><td id="building-var-feb27">0%</td><td id="building-var-mar27">0%</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 </div>
-<div id="indirect-dashboard" class="dashboard-page" style="display:none">
+<div id="indirect-dashboard" class="dashboard-page" style="display: none;">
 <!-- ── HIDDEN UPLOAD CORNER (only visible on hover) ── -->
 <div class="upload-trigger">
   <button class="upload-trigger-btn" onclick="document.getElementById('indirect-excelInput').click()">
@@ -466,11 +466,11 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP 2026</td>
-          <td id="indirect-bp-apr26">$ –</td><td id="indirect-bp-may26">$ –</td><td id="indirect-bp-jun26">$ –</td>
-          <td id="indirect-bp-jul26">$ –</td><td id="indirect-bp-aug26">$ –</td><td id="indirect-bp-sep26">$ –</td>
-          <td id="indirect-bp-oct26">$ –</td><td id="indirect-bp-nov26">$ –</td><td id="indirect-bp-dec26">$ –</td>
-          <td id="indirect-bp-jan27">$ –</td><td id="indirect-bp-feb27">$ –</td><td id="indirect-bp-mar27">$ –</td>
-          <td class="total-col bp" id="indirect-bp-total">$ –</td>
+          <td id="indirect-bp-apr26">$ 4,797</td><td id="indirect-bp-may26">$ 1,001</td><td id="indirect-bp-jun26">$ 8,605.6</td>
+          <td id="indirect-bp-jul26">$ 3,406.63</td><td id="indirect-bp-aug26">$ 5,553.01</td><td id="indirect-bp-sep26">$ 5,028.01</td>
+          <td id="indirect-bp-oct26">$ 5,542.3</td><td id="indirect-bp-nov26">$ 4,968.01</td><td id="indirect-bp-dec26">$ 5,028.66</td>
+          <td id="indirect-bp-jan27">$ 4,428</td><td id="indirect-bp-feb27">$ 4,718</td><td id="indirect-bp-mar27">$ 4,403</td>
+          <td class="total-col bp" id="indirect-bp-total">$ 57,479.21</td>
         </tr>
         <tr class="row-fc">
           <td>FC/ACTUAL</td>
@@ -496,7 +496,7 @@ window.addEventListener('DOMContentLoaded', function() {
   <div class="detail-panel" id="indirect-detail-apr26"><div class="detail-inner"><div class="detail-header"><h3>📋 April 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="indirect-bal-apr26">Opening Balance: <span>$ 4,797</span></div><div class="close-btn" onclick="window.toggleDetail_indirect('apr26')">✕ Close</div></div></div><div id="indirect-body-apr26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="indirect-detail-may26"><div class="detail-inner"><div class="detail-header"><h3>📋 May 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="indirect-bal-may26">Opening Balance: <span>$ 1,001</span></div><div class="close-btn" onclick="window.toggleDetail_indirect('may26')">✕ Close</div></div></div><div id="indirect-body-may26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="indirect-detail-jun26"><div class="detail-inner"><div class="detail-header"><h3>📋 June 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="indirect-bal-jun26">Opening Balance: <span>$ 8,605.6</span></div><div class="close-btn" onclick="window.toggleDetail_indirect('jun26')">✕ Close</div></div></div><div id="indirect-body-jun26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
-  <div class="detail-panel" id="indirect-detail-jul26"><div class="detail-inner"><div class="detail-header"><h3>📋 July 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="indirect-bal-jul26">Opening Balance: <span>$ 3,406.63</span></div><div class="close-btn" onclick="window.toggleDetail_indirect('jul26')">✕ Close</div></div></div><div id="indirect-body-jul26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
+  <div class="detail-panel" id="indirect-detail-jul26"><div class="detail-inner"><div class="detail-header"><h3>📋 July 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="indirect-bal-jul26">Opening Balance: <span>$ 3,406.63</span></div><div class="close-btn" onclick="window.toggleDetail_indirect('jul26')">✕ Close</div></div></div><div id="indirect-body-jul26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody><tr><td>SP 14040062</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14040062</td><td class="desc">LITHIUM PRESSING MACHINE BR 1225</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14040062</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14040062</td><td class="desc">LITHIUM PRESSING MACHINE 1620</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14040062</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14040062</td><td class="desc">LITHIUM PRESSING MACHINE 2330</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14040126</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14040126</td><td class="desc">TERMINAL BOARD CTL : BOARD &amp; BAS</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14040143</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14040143</td><td class="desc">RESISTANCE WELDING M/C</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14050055</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14050055</td><td class="desc">DIES PUNCH WITH HOLES CR - 20</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14050055</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14050055</td><td class="desc">DIES PUNCH WITHOUT HOLES CR - 2450 BLUE</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14050055</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14050055</td><td class="desc">DIES PUNCH WITHOUT HOLES CR 20</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14050062</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14050062</td><td class="desc">ESPEC COMPACT THERMAL SHOCK CHAMBER</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14050133</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14050133</td><td class="desc">PARTS CR-2 WINDING MACHINE </td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14060009</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14060009</td><td class="desc">20 CH OCV CHECKER</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14060009</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14060009</td><td class="desc">POWER METER L50 ( 150 ) A - SH + DISPLAY</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14060037</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14060037</td><td class="desc">H2N WELDING TAB ( + )</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14060037</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14060037</td><td class="desc">H2N WELDING TAB ( - )</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14060038</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14060038</td><td class="desc">MOLD &amp; DIES TRAY</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14060049</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14060049</td><td class="desc">MODIFICATION CYLINDER CATHODE LINE</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14060049</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14060049</td><td class="desc">NEW OVEN VACUUM DRIER ROOM</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14060090</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14060090</td><td class="desc">OCV AUTO MACHINE FOR COIN WELDING</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14060094</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14060094</td><td class="desc">ELECTRICAL WORK FOR INSTALLATION PANEL MONITOR ALARM AT PECGI</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14060101</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14060101</td><td class="desc">NEW MOULD SHOP - PARTITION</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP14060101</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP14060101</td><td class="desc">NEW MOULD SHOP - AC </td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr><tr><td>SP 14060094</td><td></td><td class="muted"></td><td class="muted"></td><td class="muted">SP 14060094</td><td class="desc">ELECTRICAL WORK FOR INSTALLATION PANEL MONITOR ALARM AT PECGI</td><td class="amt">$ –</td><td class="bal">$ 3,406.63</td><td class="muted"></td></tr></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">$ 3,406.63</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="indirect-detail-aug26"><div class="detail-inner"><div class="detail-header"><h3>📋 August 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="indirect-bal-aug26">Opening Balance: <span>$ 5,553.01</span></div><div class="close-btn" onclick="window.toggleDetail_indirect('aug26')">✕ Close</div></div></div><div id="indirect-body-aug26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="indirect-detail-sep26"><div class="detail-inner"><div class="detail-header"><h3>📋 September 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="indirect-bal-sep26">Opening Balance: <span>$ 5,028.01</span></div><div class="close-btn" onclick="window.toggleDetail_indirect('sep26')">✕ Close</div></div></div><div id="indirect-body-sep26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="indirect-detail-oct26"><div class="detail-inner"><div class="detail-header"><h3>📋 October 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="indirect-bal-oct26">Opening Balance: <span>$ 5,542.3</span></div><div class="close-btn" onclick="window.toggleDetail_indirect('oct26')">✕ Close</div></div></div><div id="indirect-body-oct26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
@@ -516,8 +516,8 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP 2026</td>
-          <td id="indirect-bp-q1">$ –</td><td id="indirect-bp-q2">$ –</td><td id="indirect-bp-smt1">$ –</td>
-          <td id="indirect-bp-q3">$ –</td><td id="indirect-bp-q4">$ –</td><td id="indirect-bp-smt2">$ –</td>
+          <td id="indirect-bp-q1">$ 14,403.6</td><td id="indirect-bp-q2">$ 13,987.65</td><td id="indirect-bp-smt1">$ 28,391.25</td>
+          <td id="indirect-bp-q3">$ 15,538.96</td><td id="indirect-bp-q4">$ 13,549</td><td id="indirect-bp-smt2">$ 29,087.96</td>
           <td class="total-col bp" id="indirect-bp-total">$ 57,479.21</td>
         </tr>
         <tr class="row-fc">
@@ -553,28 +553,28 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP</td>
-          <td id="indirect-ytdbp-apr26">–</td><td id="indirect-ytdbp-may26">–</td><td id="indirect-ytdbp-jun26">–</td><td id="indirect-ytdbp-jul26">–</td>
-          <td id="indirect-ytdbp-aug26">–</td><td id="indirect-ytdbp-sep26">–</td><td id="indirect-ytdbp-oct26">–</td><td id="indirect-ytdbp-nov26">–</td>
-          <td id="indirect-ytdbp-dec26">–</td><td id="indirect-ytdbp-jan27">–</td><td id="indirect-ytdbp-feb27">–</td><td id="indirect-ytdbp-mar27">–</td>
+          <td id="indirect-ytdbp-apr26">4,797</td><td id="indirect-ytdbp-may26">5,798</td><td id="indirect-ytdbp-jun26">14,403.6</td><td id="indirect-ytdbp-jul26">17,810.23</td>
+          <td id="indirect-ytdbp-aug26">23,363.24</td><td id="indirect-ytdbp-sep26">28,391.25</td><td id="indirect-ytdbp-oct26">33,933.54</td><td id="indirect-ytdbp-nov26">38,901.55</td>
+          <td id="indirect-ytdbp-dec26">43,930.21</td><td id="indirect-ytdbp-jan27">48,358.21</td><td id="indirect-ytdbp-feb27">53,076.21</td><td id="indirect-ytdbp-mar27">57,479.21</td>
         </tr>
         <tr class="row-fc">
           <td>ACTUAL</td>
-          <td id="indirect-ytd-apr26">–</td><td id="indirect-ytd-may26">–</td><td id="indirect-ytd-jun26">–</td><td id="indirect-ytd-jul26">–</td>
-          <td id="indirect-ytd-aug26">–</td><td id="indirect-ytd-sep26">–</td><td id="indirect-ytd-oct26">–</td><td id="indirect-ytd-nov26">–</td>
-          <td id="indirect-ytd-dec26">–</td><td id="indirect-ytd-jan27">–</td><td id="indirect-ytd-feb27">–</td><td id="indirect-ytd-mar27">–</td>
+          <td id="indirect-ytd-apr26">0</td><td id="indirect-ytd-may26">0</td><td id="indirect-ytd-jun26">0</td><td id="indirect-ytd-jul26">0</td>
+          <td id="indirect-ytd-aug26">0</td><td id="indirect-ytd-sep26">0</td><td id="indirect-ytd-oct26">0</td><td id="indirect-ytd-nov26">0</td>
+          <td id="indirect-ytd-dec26">0</td><td id="indirect-ytd-jan27">0</td><td id="indirect-ytd-feb27">0</td><td id="indirect-ytd-mar27">0</td>
         </tr>
         <tr class="row-pct">
           <td>PERCENTAGE</td>
-          <td id="indirect-var-apr26">–</td><td id="indirect-var-may26">–</td><td id="indirect-var-jun26">–</td><td id="indirect-var-jul26">–</td>
-          <td id="indirect-var-aug26">–</td><td id="indirect-var-sep26">–</td><td id="indirect-var-oct26">–</td><td id="indirect-var-nov26">–</td>
-          <td id="indirect-var-dec26">–</td><td id="indirect-var-jan27">–</td><td id="indirect-var-feb27">–</td><td id="indirect-var-mar27">–</td>
+          <td id="indirect-var-apr26">0%</td><td id="indirect-var-may26">0%</td><td id="indirect-var-jun26">0%</td><td id="indirect-var-jul26">0%</td>
+          <td id="indirect-var-aug26">0%</td><td id="indirect-var-sep26">0%</td><td id="indirect-var-oct26">0%</td><td id="indirect-var-nov26">0%</td>
+          <td id="indirect-var-dec26">0%</td><td id="indirect-var-jan27">0%</td><td id="indirect-var-feb27">0%</td><td id="indirect-var-mar27">0%</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 </div>
-<div id="perishable-dashboard" class="dashboard-page" style="display: block;">
+<div id="perishable-dashboard" class="dashboard-page" style="display: none;">
 <!-- ── HIDDEN UPLOAD CORNER (only visible on hover) ── -->
 <div class="upload-trigger">
   <button class="upload-trigger-btn" onclick="document.getElementById('perishable-excelInput').click()">
@@ -621,11 +621,11 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP 2026</td>
-          <td id="perishable-bp-apr26">$ –</td><td id="perishable-bp-may26">$ –</td><td id="perishable-bp-jun26">$ –</td>
-          <td id="perishable-bp-jul26">$ –</td><td id="perishable-bp-aug26">$ –</td><td id="perishable-bp-sep26">$ –</td>
-          <td id="perishable-bp-oct26">$ –</td><td id="perishable-bp-nov26">$ –</td><td id="perishable-bp-dec26">$ –</td>
-          <td id="perishable-bp-jan27">$ –</td><td id="perishable-bp-feb27">$ –</td><td id="perishable-bp-mar27">$ –</td>
-          <td class="total-col bp" id="perishable-bp-total">$ –</td>
+          <td id="perishable-bp-apr26">$ 205</td><td id="perishable-bp-may26">$ 1,334</td><td id="perishable-bp-jun26">$ 1,077</td>
+          <td id="perishable-bp-jul26">$ 622.72</td><td id="perishable-bp-aug26">$ 4,652.18</td><td id="perishable-bp-sep26">$ 4,804.11</td>
+          <td id="perishable-bp-oct26">$ 12,916.16</td><td id="perishable-bp-nov26">$ 4,734.85</td><td id="perishable-bp-dec26">$ 5,978.23</td>
+          <td id="perishable-bp-jan27">$ 12,939</td><td id="perishable-bp-feb27">$ 4,718</td><td id="perishable-bp-mar27">$ 4,697</td>
+          <td class="total-col bp" id="perishable-bp-total">$ 58,678.26</td>
         </tr>
         <tr class="row-fc">
           <td>FC/ACTUAL</td>
@@ -651,7 +651,7 @@ window.addEventListener('DOMContentLoaded', function() {
   <div class="detail-panel" id="perishable-detail-apr26"><div class="detail-inner"><div class="detail-header"><h3>📋 April 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="perishable-bal-apr26">Opening Balance: <span>$ 205</span></div><div class="close-btn" onclick="window.toggleDetail_perishable('apr26')">✕ Close</div></div></div><div id="perishable-body-apr26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="perishable-detail-may26"><div class="detail-inner"><div class="detail-header"><h3>📋 May 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="perishable-bal-may26">Opening Balance: <span>$ 1,334</span></div><div class="close-btn" onclick="window.toggleDetail_perishable('may26')">✕ Close</div></div></div><div id="perishable-body-may26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="perishable-detail-jun26"><div class="detail-inner"><div class="detail-header"><h3>📋 June 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="perishable-bal-jun26">Opening Balance: <span>$ 1,077</span></div><div class="close-btn" onclick="window.toggleDetail_perishable('jun26')">✕ Close</div></div></div><div id="perishable-body-jun26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
-  <div class="detail-panel" id="perishable-detail-jul26"><div class="detail-inner"><div class="detail-header"><h3>📋 July 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="perishable-bal-jul26">Opening Balance: <span>$ 622.72</span></div><div class="close-btn" onclick="window.toggleDetail_perishable('jul26')">✕ Close</div></div></div><div id="perishable-body-jul26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
+  <div class="detail-panel" id="perishable-detail-jul26"><div class="detail-inner"><div class="detail-header"><h3>📋 July 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="perishable-bal-jul26">Opening Balance: <span>$ 622.72</span></div><div class="close-btn" onclick="window.toggleDetail_perishable('jul26')">✕ Close</div></div></div><div id="perishable-body-jul26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody><tr><td>SP 14040062</td><td></td><td class="muted"></td><td class="muted">SP 14040062</td><td class="muted"></td><td class="desc">LITHIUM PRESSING MACHINE BR 1225</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14040062</td><td></td><td class="muted"></td><td class="muted">SP 14040062</td><td class="muted"></td><td class="desc">LITHIUM PRESSING MACHINE 1620</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14040062</td><td></td><td class="muted"></td><td class="muted">SP 14040062</td><td class="muted"></td><td class="desc">LITHIUM PRESSING MACHINE 2330</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14040126</td><td></td><td class="muted"></td><td class="muted">SP 14040126</td><td class="muted"></td><td class="desc">TERMINAL BOARD CTL : BOARD &amp; BAS</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14040143</td><td></td><td class="muted"></td><td class="muted">SP 14040143</td><td class="muted"></td><td class="desc">RESISTANCE WELDING M/C</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14050055</td><td></td><td class="muted"></td><td class="muted">SP14050055</td><td class="muted"></td><td class="desc">DIES PUNCH WITH HOLES CR - 20</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14050055</td><td></td><td class="muted"></td><td class="muted">SP14050055</td><td class="muted"></td><td class="desc">DIES PUNCH WITHOUT HOLES CR - 2450 BLUE</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14050055</td><td></td><td class="muted"></td><td class="muted">SP14050055</td><td class="muted"></td><td class="desc">DIES PUNCH WITHOUT HOLES CR 20</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14050062</td><td></td><td class="muted"></td><td class="muted">SP14050062</td><td class="muted"></td><td class="desc">ESPEC COMPACT THERMAL SHOCK CHAMBER</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14050133</td><td></td><td class="muted"></td><td class="muted">SP 14050133</td><td class="muted"></td><td class="desc">PARTS CR-2 WINDING MACHINE </td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14060009</td><td></td><td class="muted"></td><td class="muted">SP 14060009</td><td class="muted"></td><td class="desc">20 CH OCV CHECKER</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14060009</td><td></td><td class="muted"></td><td class="muted">SP 14060009</td><td class="muted"></td><td class="desc">POWER METER L50 ( 150 ) A - SH + DISPLAY</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14060037</td><td></td><td class="muted"></td><td class="muted">SP14060037</td><td class="muted"></td><td class="desc">H2N WELDING TAB ( + )</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14060037</td><td></td><td class="muted"></td><td class="muted">SP14060037</td><td class="muted"></td><td class="desc">H2N WELDING TAB ( - )</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14060038</td><td></td><td class="muted"></td><td class="muted">SP14060038</td><td class="muted"></td><td class="desc">MOLD &amp; DIES TRAY</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14060049</td><td></td><td class="muted"></td><td class="muted">SP14060049</td><td class="muted"></td><td class="desc">MODIFICATION CYLINDER CATHODE LINE</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14060049</td><td></td><td class="muted"></td><td class="muted">SP14060049</td><td class="muted"></td><td class="desc">NEW OVEN VACUUM DRIER ROOM</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14060090</td><td></td><td class="muted"></td><td class="muted">SP 14060090</td><td class="muted"></td><td class="desc">OCV AUTO MACHINE FOR COIN WELDING</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14060094</td><td></td><td class="muted"></td><td class="muted">SP 14060094</td><td class="muted"></td><td class="desc">ELECTRICAL WORK FOR INSTALLATION PANEL MONITOR ALARM AT PECGI</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14060101</td><td></td><td class="muted"></td><td class="muted">SP14060101</td><td class="muted"></td><td class="desc">NEW MOULD SHOP - PARTITION</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP14060101</td><td></td><td class="muted"></td><td class="muted">SP14060101</td><td class="muted"></td><td class="desc">NEW MOULD SHOP - AC </td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr><tr><td>SP 14060094</td><td></td><td class="muted"></td><td class="muted">SP 14060094</td><td class="muted"></td><td class="desc">ELECTRICAL WORK FOR INSTALLATION PANEL MONITOR ALARM AT PECGI</td><td class="amt">$ –</td><td class="bal">$ 622.72</td><td class="muted"></td></tr></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">$ 622.72</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="perishable-detail-aug26"><div class="detail-inner"><div class="detail-header"><h3>📋 August 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="perishable-bal-aug26">Opening Balance: <span>$ 4,652.18</span></div><div class="close-btn" onclick="window.toggleDetail_perishable('aug26')">✕ Close</div></div></div><div id="perishable-body-aug26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="perishable-detail-sep26"><div class="detail-inner"><div class="detail-header"><h3>📋 September 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="perishable-bal-sep26">Opening Balance: <span>$ 4,804.11</span></div><div class="close-btn" onclick="window.toggleDetail_perishable('sep26')">✕ Close</div></div></div><div id="perishable-body-sep26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
   <div class="detail-panel" id="perishable-detail-oct26"><div class="detail-inner"><div class="detail-header"><h3>📋 October 2026</h3><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;"><div class="badge" id="perishable-bal-oct26">Opening Balance: <span>$ 12,916.16</span></div><div class="close-btn" onclick="window.toggleDetail_perishable('oct26')">✕ Close</div></div></div><div id="perishable-body-oct26"><div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>NO REQ</th><th>COST CEN</th><th>PROGRESS LEADTIME</th><th>PO NO</th><th>GR DATE</th><th class="desc">ITEM DESCRIPTION</th><th class="r">AMOUNT</th><th class="r">BALANCE</th><th>REMARK</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="f-amt">$ 0</td><td class="f-bal">–</td><td></td></tr></tfoot></table></div></div></div></div>
@@ -671,8 +671,8 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP 2026</td>
-          <td id="perishable-bp-q1">$ –</td><td id="perishable-bp-q2">$ –</td><td id="perishable-bp-smt1">$ –</td>
-          <td id="perishable-bp-q3">$ –</td><td id="perishable-bp-q4">$ –</td><td id="perishable-bp-smt2">$ –</td>
+          <td id="perishable-bp-q1">$ 2,616</td><td id="perishable-bp-q2">$ 10,079.02</td><td id="perishable-bp-smt1">$ 12,695.02</td>
+          <td id="perishable-bp-q3">$ 23,629.24</td><td id="perishable-bp-q4">$ 22,354</td><td id="perishable-bp-smt2">$ 45,983.24</td>
           <td class="total-col bp" id="perishable-bp-total">$ 58,678.26</td>
         </tr>
         <tr class="row-fc">
@@ -708,28 +708,28 @@ window.addEventListener('DOMContentLoaded', function() {
       <tbody>
         <tr class="row-bp">
           <td>BP</td>
-          <td id="perishable-ytdbp-apr26">–</td><td id="perishable-ytdbp-may26">–</td><td id="perishable-ytdbp-jun26">–</td><td id="perishable-ytdbp-jul26">–</td>
-          <td id="perishable-ytdbp-aug26">–</td><td id="perishable-ytdbp-sep26">–</td><td id="perishable-ytdbp-oct26">–</td><td id="perishable-ytdbp-nov26">–</td>
-          <td id="perishable-ytdbp-dec26">–</td><td id="perishable-ytdbp-jan27">–</td><td id="perishable-ytdbp-feb27">–</td><td id="perishable-ytdbp-mar27">–</td>
+          <td id="perishable-ytdbp-apr26">205</td><td id="perishable-ytdbp-may26">1,539</td><td id="perishable-ytdbp-jun26">2,616</td><td id="perishable-ytdbp-jul26">3,238.72</td>
+          <td id="perishable-ytdbp-aug26">7,890.91</td><td id="perishable-ytdbp-sep26">12,695.02</td><td id="perishable-ytdbp-oct26">25,611.18</td><td id="perishable-ytdbp-nov26">30,346.03</td>
+          <td id="perishable-ytdbp-dec26">36,324.26</td><td id="perishable-ytdbp-jan27">49,263.26</td><td id="perishable-ytdbp-feb27">53,981.26</td><td id="perishable-ytdbp-mar27">58,678.26</td>
         </tr>
         <tr class="row-fc">
           <td>ACTUAL</td>
-          <td id="perishable-ytd-apr26">–</td><td id="perishable-ytd-may26">–</td><td id="perishable-ytd-jun26">–</td><td id="perishable-ytd-jul26">–</td>
-          <td id="perishable-ytd-aug26">–</td><td id="perishable-ytd-sep26">–</td><td id="perishable-ytd-oct26">–</td><td id="perishable-ytd-nov26">–</td>
-          <td id="perishable-ytd-dec26">–</td><td id="perishable-ytd-jan27">–</td><td id="perishable-ytd-feb27">–</td><td id="perishable-ytd-mar27">–</td>
+          <td id="perishable-ytd-apr26">0</td><td id="perishable-ytd-may26">0</td><td id="perishable-ytd-jun26">0</td><td id="perishable-ytd-jul26">0</td>
+          <td id="perishable-ytd-aug26">0</td><td id="perishable-ytd-sep26">0</td><td id="perishable-ytd-oct26">0</td><td id="perishable-ytd-nov26">0</td>
+          <td id="perishable-ytd-dec26">0</td><td id="perishable-ytd-jan27">0</td><td id="perishable-ytd-feb27">0</td><td id="perishable-ytd-mar27">0</td>
         </tr>
         <tr class="row-pct">
           <td>PERCENTAGE</td>
-          <td id="perishable-var-apr26">–</td><td id="perishable-var-may26">–</td><td id="perishable-var-jun26">–</td><td id="perishable-var-jul26">–</td>
-          <td id="perishable-var-aug26">–</td><td id="perishable-var-sep26">–</td><td id="perishable-var-oct26">–</td><td id="perishable-var-nov26">–</td>
-          <td id="perishable-var-dec26">–</td><td id="perishable-var-jan27">–</td><td id="perishable-var-feb27">–</td><td id="perishable-var-mar27">–</td>
+          <td id="perishable-var-apr26">0%</td><td id="perishable-var-may26">0%</td><td id="perishable-var-jun26">0%</td><td id="perishable-var-jul26">0%</td>
+          <td id="perishable-var-aug26">0%</td><td id="perishable-var-sep26">0%</td><td id="perishable-var-oct26">0%</td><td id="perishable-var-nov26">0%</td>
+          <td id="perishable-var-dec26">0%</td><td id="perishable-var-jan27">0%</td><td id="perishable-var-feb27">0%</td><td id="perishable-var-mar27">0%</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 </div>
-<div id="repairingmc-dashboard" class="dashboard-page" style="display: none;">
+<div id="repairingmc-dashboard" class="dashboard-page" style="display: block;">
 <!-- ── HIDDEN UPLOAD CORNER (only visible on hover) ── -->
 <div class="upload-trigger">
   <button class="upload-trigger-btn" onclick="document.getElementById('repairingmc-excelInput').click()">

@@ -184,18 +184,14 @@ box-shadow:0 4px 16px rgba(62,207,142,0.4); transition:all 0.2s;
 </style>
 </head>
 <body>
-<!-- ── BACK BUTTON ── -->
-<button class="back-btn visible" id="back-btn" onclick="showMenu()">← Back</button>
-<!-- FIX: Button starts hidden with correct text -->
-<button id="save-github-btn" onclick="saveToGitHub()" class="visible" disabled="">⏳ Saving...</button>
-<!-- ── UPLOAD CORNER ── -->
-<div class="upload-trigger" id="upload-corner" style="display: block;">
+<button class="back-btn" id="back-btn" onclick="showMenu()">← Back</button>
+<button id="save-github-btn" onclick="saveToGitHub()">💾 Save</button>
+<div class="upload-trigger" id="upload-corner" style="display: none;">
 <button class="upload-trigger-btn" id="upload-corner-btn">⬆ Upload Excel</button>
 </div>
-<!-- ── STATUS TOAST ── -->
-<div class="status-bar green" id="global-statusBar">✅ 13 month(s) loaded: SUMMARY, APR, MAY, JUNE, JULY, AUG, SEP, OCT, NOV, DEC, JAN 26, FEB 26, MAR 26</div>
-<!-- ══ MENU PAGE ══ -->
-<div id="menu-page" style="display: none;">
+<div class="status-bar green" id="global-statusBar">✅ Ready</div>
+
+<div id="menu-page" style="display: flex;">
 <div class="menu-header">
 <h1>Summary Business Plan <span>2026</span></h1>
 <p>SELECT DASHBOARD &nbsp;·&nbsp; FY 2026–2027</p>
@@ -227,13 +223,13 @@ box-shadow:0 4px 16px rgba(62,207,142,0.4); transition:all 0.2s;
 </div>
 </div>
 </div>
-<!-- ══ DASHBOARD PAGES ══ -->
-<div id="building-dashboard" class="dashboard-page" style="display: block;">
+
+<div id="building-dashboard" class="dashboard-page" style="display: none;">
 <div class="upload-trigger">
 <button class="upload-trigger-btn" onclick="document.getElementById('building-excelInput').click()">⬆ Upload Excel</button>
 <input type="file" id="building-excelInput" accept=".xlsx,.xls" onchange="window.handleExcel_building(event)">
 </div>
-<div class="status-bar green" id="building-statusBar">✅ 13 month(s) loaded: SUMMARY, APR, MAY, JUNE, JULY, AUG, SEP, OCT, NOV, DEC, JAN 26, FEB 26, MAR 26</div>
+<div class="status-bar green" id="building-statusBar">✅ Ready</div>
 <header>
 <h1>Summary Business Plan <span>2026</span></h1>
 <p>REPAIRING BUILDING &nbsp;·&nbsp; FY 2026–2027</p>
@@ -248,44 +244,44 @@ box-shadow:0 4px 16px rgba(62,207,142,0.4); transition:all 0.2s;
 </tr>
 <tr>
 <th></th>
-<th class="month-btn has-data" id="building-btn-apr26" onclick="window.toggleDetail_building('apr26')">Apr-26</th>
-<th class="month-btn has-data" id="building-btn-may26" onclick="window.toggleDetail_building('may26')">May-26</th>
-<th class="month-btn has-data" id="building-btn-jun26" onclick="window.toggleDetail_building('jun26')">Jun-26</th>
-<th class="month-btn has-data" id="building-btn-jul26" onclick="window.toggleDetail_building('jul26')">Jul-26</th>
-<th class="month-btn has-data" id="building-btn-aug26" onclick="window.toggleDetail_building('aug26')">Aug-26</th>
-<th class="month-btn has-data" id="building-btn-sep26" onclick="window.toggleDetail_building('sep26')">Sep-26</th>
-<th class="month-btn has-data" id="building-btn-oct26" onclick="window.toggleDetail_building('oct26')">Oct-26</th>
-<th class="month-btn has-data" id="building-btn-nov26" onclick="window.toggleDetail_building('nov26')">Nov-26</th>
-<th class="month-btn has-data" id="building-btn-dec26" onclick="window.toggleDetail_building('dec26')">Dec-26</th>
-<th class="month-btn has-data" id="building-btn-jan27" onclick="window.toggleDetail_building('jan27')">Jan-27</th>
-<th class="month-btn has-data" id="building-btn-feb27" onclick="window.toggleDetail_building('feb27')">Feb-27</th>
-<th class="month-btn has-data" id="building-btn-mar27" onclick="window.toggleDetail_building('mar27')">Mar-27</th>
+<th class="month-btn" id="building-btn-apr26" onclick="window.toggleDetail_building('apr26')">Apr-26</th>
+<th class="month-btn" id="building-btn-may26" onclick="window.toggleDetail_building('may26')">May-26</th>
+<th class="month-btn" id="building-btn-jun26" onclick="window.toggleDetail_building('jun26')">Jun-26</th>
+<th class="month-btn" id="building-btn-jul26" onclick="window.toggleDetail_building('jul26')">Jul-26</th>
+<th class="month-btn" id="building-btn-aug26" onclick="window.toggleDetail_building('aug26')">Aug-26</th>
+<th class="month-btn" id="building-btn-sep26" onclick="window.toggleDetail_building('sep26')">Sep-26</th>
+<th class="month-btn" id="building-btn-oct26" onclick="window.toggleDetail_building('oct26')">Oct-26</th>
+<th class="month-btn" id="building-btn-nov26" onclick="window.toggleDetail_building('nov26')">Nov-26</th>
+<th class="month-btn" id="building-btn-dec26" onclick="window.toggleDetail_building('dec26')">Dec-26</th>
+<th class="month-btn" id="building-btn-jan27" onclick="window.toggleDetail_building('jan27')">Jan-27</th>
+<th class="month-btn" id="building-btn-feb27" onclick="window.toggleDetail_building('feb27')">Feb-27</th>
+<th class="month-btn" id="building-btn-mar27" onclick="window.toggleDetail_building('mar27')">Mar-27</th>
 <th>TOTAL</th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-bp">
 <td>BP 2026</td>
-<td id="building-bp-apr26">$ 205</td><td id="building-bp-may26">$ 1,334</td><td id="building-bp-jun26">$ 7,000</td>
-<td id="building-bp-jul26">$ 10,000</td><td id="building-bp-aug26">$ 4,652.18</td><td id="building-bp-sep26">$ 17,000</td>
-<td id="building-bp-oct26">$ 12,916.16</td><td id="building-bp-nov26">$ 4,734.85</td><td id="building-bp-dec26">$ 17,000</td>
-<td id="building-bp-jan27">$ 17,000</td><td id="building-bp-feb27">$ 4,718</td><td id="building-bp-mar27">$ 46,296</td>
-<td class="total-col bp" id="building-bp-total">$ 114,296</td>
+<td id="building-bp-apr26">$ –</td><td id="building-bp-may26">$ –</td><td id="building-bp-jun26">$ –</td>
+<td id="building-bp-jul26">$ –</td><td id="building-bp-aug26">$ –</td><td id="building-bp-sep26">$ –</td>
+<td id="building-bp-oct26">$ –</td><td id="building-bp-nov26">$ –</td><td id="building-bp-dec26">$ –</td>
+<td id="building-bp-jan27">$ –</td><td id="building-bp-feb27">$ –</td><td id="building-bp-mar27">$ –</td>
+<td class="total-col bp" id="building-bp-total">$ –</td>
 </tr>
 <tr class="row-fc">
 <td>FC/ACTUAL</td>
-<td id="building-fc-apr26">$ 0</td><td id="building-fc-may26">$ 0</td><td id="building-fc-jun26">$ 0</td>
-<td id="building-fc-jul26">$ 0</td><td id="building-fc-aug26">$ 0</td><td id="building-fc-sep26">$ 0</td>
-<td id="building-fc-oct26">$ 0</td><td id="building-fc-nov26">$ 0</td><td id="building-fc-dec26">$ 0</td>
-<td id="building-fc-jan27">$ 0</td><td id="building-fc-feb27">$ 0</td><td id="building-fc-mar27">$ 0</td>
+<td id="building-fc-apr26">$ –</td><td id="building-fc-may26">$ –</td><td id="building-fc-jun26">$ –</td>
+<td id="building-fc-jul26">$ –</td><td id="building-fc-aug26">$ –</td><td id="building-fc-sep26">$ –</td>
+<td id="building-fc-oct26">$ –</td><td id="building-fc-nov26">$ –</td><td id="building-fc-dec26">$ –</td>
+<td id="building-fc-jan27">$ –</td><td id="building-fc-feb27">$ –</td><td id="building-fc-mar27">$ –</td>
 <td class="total-col fc" id="building-fc-total">$ –</td>
 </tr>
 <tr class="row-pct">
 <td>PERCENTAGE</td>
-<td id="building-pct-apr26">0%</td><td id="building-pct-may26">0%</td><td id="building-pct-jun26">0%</td>
-<td id="building-pct-jul26">0%</td><td id="building-pct-aug26">0%</td><td id="building-pct-sep26">0%</td>
-<td id="building-pct-oct26">0%</td><td id="building-pct-nov26">0%</td><td id="building-pct-dec26">0%</td>
-<td id="building-pct-jan27">0%</td><td id="building-pct-feb27">0%</td><td id="building-pct-mar27">0%</td>
+<td id="building-pct-apr26">–</td><td id="building-pct-may26">–</td><td id="building-pct-jun26">–</td>
+<td id="building-pct-jul26">–</td><td id="building-pct-aug26">–</td><td id="building-pct-sep26">–</td>
+<td id="building-pct-oct26">–</td><td id="building-pct-nov26">–</td><td id="building-pct-dec26">–</td>
+<td id="building-pct-jan27">–</td><td id="building-pct-feb27">–</td><td id="building-pct-mar27">–</td>
 <td class="total-col pct" id="building-pct-total">–</td>
 </tr>
 </tbody>
@@ -300,9 +296,9 @@ box-shadow:0 4px 16px rgba(62,207,142,0.4); transition:all 0.2s;
 <tbody>
 <tr class="row-bp">
 <td>BP 2026</td>
-<td id="building-bp-q1">$ 7,000</td><td id="building-bp-q2">$ 27,000</td><td id="building-bp-smt1">$ 34,000</td>
-<td id="building-bp-q3">$ 17,000</td><td id="building-bp-q4">$ 63,296</td><td id="building-bp-smt2">$ 80,296</td>
-<td class="total-col bp" id="building-bp-total">$ 114,296</td>
+<td id="building-bp-q1">$ –</td><td id="building-bp-q2">$ –</td><td id="building-bp-smt1">$ –</td>
+<td id="building-bp-q3">$ –</td><td id="building-bp-q4">$ –</td><td id="building-bp-smt2">$ –</td>
+<td class="total-col bp" id="building-bp-total-q">$ –</td>
 </tr>
 <tr class="row-fc">
 <td>FC/ACTUAL</td>
@@ -335,32 +331,416 @@ box-shadow:0 4px 16px rgba(62,207,142,0.4); transition:all 0.2s;
 <tbody>
 <tr class="row-bp">
 <td>BP</td>
-<td id="building-ytdbp-apr26">0</td><td id="building-ytdbp-may26">0</td><td id="building-ytdbp-jun26">7,000</td><td id="building-ytdbp-jul26">17,000</td>
-<td id="building-ytdbp-aug26">17,000</td><td id="building-ytdbp-sep26">34,000</td><td id="building-ytdbp-oct26">34,000</td><td id="building-ytdbp-nov26">34,000</td>
-<td id="building-ytdbp-dec26">51,000</td><td id="building-ytdbp-jan27">68,000</td><td id="building-ytdbp-feb27">68,000</td><td id="building-ytdbp-mar27">114,296</td>
+<td id="building-ytdbp-apr26">–</td><td id="building-ytdbp-may26">–</td><td id="building-ytdbp-jun26">–</td><td id="building-ytdbp-jul26">–</td>
+<td id="building-ytdbp-aug26">–</td><td id="building-ytdbp-sep26">–</td><td id="building-ytdbp-oct26">–</td><td id="building-ytdbp-nov26">–</td>
+<td id="building-ytdbp-dec26">–</td><td id="building-ytdbp-jan27">–</td><td id="building-ytdbp-feb27">–</td><td id="building-ytdbp-mar27">–</td>
 </tr>
 <tr class="row-fc">
 <td>ACTUAL</td>
-<td id="building-ytd-apr26">0</td><td id="building-ytd-may26">0</td><td id="building-ytd-jun26">0</td><td id="building-ytd-jul26">0</td>
-<td id="building-ytd-aug26">0</td><td id="building-ytd-sep26">0</td><td id="building-ytd-oct26">0</td><td id="building-ytd-nov26">0</td>
-<td id="building-ytd-dec26">0</td><td id="building-ytd-jan27">0</td><td id="building-ytd-feb27">0</td><td id="building-ytd-mar27">0</td>
+<td id="building-ytd-apr26">–</td><td id="building-ytd-may26">–</td><td id="building-ytd-jun26">–</td><td id="building-ytd-jul26">–</td>
+<td id="building-ytd-aug26">–</td><td id="building-ytd-sep26">–</td><td id="building-ytd-oct26">–</td><td id="building-ytd-nov26">–</td>
+<td id="building-ytd-dec26">–</td><td id="building-ytd-jan27">–</td><td id="building-ytd-feb27">–</td><td id="building-ytd-mar27">–</td>
 </tr>
 <tr class="row-pct">
 <td>PERCENTAGE</td>
-<td id="building-var-apr26">–</td><td id="building-var-may26">–</td><td id="building-var-jun26">0%</td><td id="building-var-jul26">0%</td>
-<td id="building-var-aug26">0%</td><td id="building-var-sep26">0%</td><td id="building-var-oct26">0%</td><td id="building-var-nov26">0%</td>
-<td id="building-var-dec26">0%</td><td id="building-var-jan27">0%</td><td id="building-var-feb27">0%</td><td id="building-var-mar27">0%</td>
+<td id="building-var-apr26">–</td><td id="building-var-may26">–</td><td id="building-var-jun26">–</td><td id="building-var-jul26">–</td>
+<td id="building-var-aug26">–</td><td id="building-var-sep26">–</td><td id="building-var-oct26">–</td><td id="building-var-nov26">–</td>
+<td id="building-var-dec26">–</td><td id="building-var-jan27">–</td><td id="building-var-feb27">–</td><td id="building-var-mar27">–</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
-<!-- Note: Other dashboards (indirect, perishable, repairingmc) follow same structure - keeping file size manageable -->
+
+<div id="indirect-dashboard" class="dashboard-page" style="display: none;">
+<div class="upload-trigger">
+<button class="upload-trigger-btn" onclick="document.getElementById('indirect-excelInput').click()">⬆ Upload Excel</button>
+<input type="file" id="indirect-excelInput" accept=".xlsx,.xls" onchange="window.handleExcel_indirect(event)">
+</div>
+<div class="status-bar green" id="indirect-statusBar">✅ Ready</div>
+<header>
+<h1>Summary Business Plan <span>2026</span></h1>
+<p>INDIRECT &nbsp;·&nbsp; FY 2026–2027</p>
+</header>
+<div class="section">
+<div class="section-label">📅 Monthly</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="quarter-header">
+<th></th><th colspan="3">Q1</th><th colspan="3">Q2</th><th colspan="3">Q3</th><th colspan="3">Q4</th><th></th>
+</tr>
+<tr>
+<th></th>
+<th class="month-btn" id="indirect-btn-apr26" onclick="window.toggleDetail_indirect('apr26')">Apr-26</th>
+<th class="month-btn" id="indirect-btn-may26" onclick="window.toggleDetail_indirect('may26')">May-26</th>
+<th class="month-btn" id="indirect-btn-jun26" onclick="window.toggleDetail_indirect('jun26')">Jun-26</th>
+<th class="month-btn" id="indirect-btn-jul26" onclick="window.toggleDetail_indirect('jul26')">Jul-26</th>
+<th class="month-btn" id="indirect-btn-aug26" onclick="window.toggleDetail_indirect('aug26')">Aug-26</th>
+<th class="month-btn" id="indirect-btn-sep26" onclick="window.toggleDetail_indirect('sep26')">Sep-26</th>
+<th class="month-btn" id="indirect-btn-oct26" onclick="window.toggleDetail_indirect('oct26')">Oct-26</th>
+<th class="month-btn" id="indirect-btn-nov26" onclick="window.toggleDetail_indirect('nov26')">Nov-26</th>
+<th class="month-btn" id="indirect-btn-dec26" onclick="window.toggleDetail_indirect('dec26')">Dec-26</th>
+<th class="month-btn" id="indirect-btn-jan27" onclick="window.toggleDetail_indirect('jan27')">Jan-27</th>
+<th class="month-btn" id="indirect-btn-feb27" onclick="window.toggleDetail_indirect('feb27')">Feb-27</th>
+<th class="month-btn" id="indirect-btn-mar27" onclick="window.toggleDetail_indirect('mar27')">Mar-27</th>
+<th>TOTAL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="indirect-bp-apr26">$ –</td><td id="indirect-bp-may26">$ –</td><td id="indirect-bp-jun26">$ –</td>
+<td id="indirect-bp-jul26">$ –</td><td id="indirect-bp-aug26">$ –</td><td id="indirect-bp-sep26">$ –</td>
+<td id="indirect-bp-oct26">$ –</td><td id="indirect-bp-nov26">$ –</td><td id="indirect-bp-dec26">$ –</td>
+<td id="indirect-bp-jan27">$ –</td><td id="indirect-bp-feb27">$ –</td><td id="indirect-bp-mar27">$ –</td>
+<td class="total-col bp" id="indirect-bp-total">$ –</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="indirect-fc-apr26">$ –</td><td id="indirect-fc-may26">$ –</td><td id="indirect-fc-jun26">$ –</td>
+<td id="indirect-fc-jul26">$ –</td><td id="indirect-fc-aug26">$ –</td><td id="indirect-fc-sep26">$ –</td>
+<td id="indirect-fc-oct26">$ –</td><td id="indirect-fc-nov26">$ –</td><td id="indirect-fc-dec26">$ –</td>
+<td id="indirect-fc-jan27">$ –</td><td id="indirect-fc-feb27">$ –</td><td id="indirect-fc-mar27">$ –</td>
+<td class="total-col fc" id="indirect-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="indirect-pct-apr26">–</td><td id="indirect-pct-may26">–</td><td id="indirect-pct-jun26">–</td>
+<td id="indirect-pct-jul26">–</td><td id="indirect-pct-aug26">–</td><td id="indirect-pct-sep26">–</td>
+<td id="indirect-pct-oct26">–</td><td id="indirect-pct-nov26">–</td><td id="indirect-pct-dec26">–</td>
+<td id="indirect-pct-jan27">–</td><td id="indirect-pct-feb27">–</td><td id="indirect-pct-mar27">–</td>
+<td class="total-col pct" id="indirect-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label q">📊 Quarterly</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th>Q1</th><th>Q2</th><th>SMT1</th><th>Q3</th><th>Q4</th><th>SMT2</th><th>TOTAL</th></tr></thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="indirect-bp-q1">$ –</td><td id="indirect-bp-q2">$ –</td><td id="indirect-bp-smt1">$ –</td>
+<td id="indirect-bp-q3">$ –</td><td id="indirect-bp-q4">$ –</td><td id="indirect-bp-smt2">$ –</td>
+<td class="total-col bp" id="indirect-bp-total-q">$ –</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="indirect-q-fc-q1">$ –</td><td id="indirect-q-fc-q2">$ –</td><td id="indirect-q-fc-smt1">$ –</td>
+<td id="indirect-q-fc-q3">$ –</td><td id="indirect-q-fc-q4">$ –</td><td id="indirect-q-fc-smt2">$ –</td>
+<td class="total-col fc" id="indirect-q-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="indirect-q-pct-q1">–</td><td id="indirect-q-pct-q2">–</td><td id="indirect-q-pct-smt1">–</td>
+<td id="indirect-q-pct-q3">–</td><td id="indirect-q-pct-q4">–</td><td id="indirect-q-pct-smt2">–</td>
+<td class="total-col pct" id="indirect-q-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label ytd">📈 Year To Date</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>YEARLY</th>
+<th>Apr-26</th><th>May-26</th><th>Jun-26</th><th>Jul-26</th>
+<th>Aug-26</th><th>Sep-26</th><th>Oct-26</th><th>Nov-26</th>
+<th>Dec-26</th><th>Jan-27</th><th>Feb-27</th><th>Mar-27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP</td>
+<td id="indirect-ytdbp-apr26">–</td><td id="indirect-ytdbp-may26">–</td><td id="indirect-ytdbp-jun26">–</td><td id="indirect-ytdbp-jul26">–</td>
+<td id="indirect-ytdbp-aug26">–</td><td id="indirect-ytdbp-sep26">–</td><td id="indirect-ytdbp-oct26">–</td><td id="indirect-ytdbp-nov26">–</td>
+<td id="indirect-ytdbp-dec26">–</td><td id="indirect-ytdbp-jan27">–</td><td id="indirect-ytdbp-feb27">–</td><td id="indirect-ytdbp-mar27">–</td>
+</tr>
+<tr class="row-fc">
+<td>ACTUAL</td>
+<td id="indirect-ytd-apr26">–</td><td id="indirect-ytd-may26">–</td><td id="indirect-ytd-jun26">–</td><td id="indirect-ytd-jul26">–</td>
+<td id="indirect-ytd-aug26">–</td><td id="indirect-ytd-sep26">–</td><td id="indirect-ytd-oct26">–</td><td id="indirect-ytd-nov26">–</td>
+<td id="indirect-ytd-dec26">–</td><td id="indirect-ytd-jan27">–</td><td id="indirect-ytd-feb27">–</td><td id="indirect-ytd-mar27">–</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="indirect-var-apr26">–</td><td id="indirect-var-may26">–</td><td id="indirect-var-jun26">–</td><td id="indirect-var-jul26">–</td>
+<td id="indirect-var-aug26">–</td><td id="indirect-var-sep26">–</td><td id="indirect-var-oct26">–</td><td id="indirect-var-nov26">–</td>
+<td id="indirect-var-dec26">–</td><td id="indirect-var-jan27">–</td><td id="indirect-var-feb27">–</td><td id="indirect-var-mar27">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="perishable-dashboard" class="dashboard-page" style="display: none;">
+<div class="upload-trigger">
+<button class="upload-trigger-btn" onclick="document.getElementById('perishable-excelInput').click()">⬆ Upload Excel</button>
+<input type="file" id="perishable-excelInput" accept=".xlsx,.xls" onchange="window.handleExcel_perishable(event)">
+</div>
+<div class="status-bar green" id="perishable-statusBar">✅ Ready</div>
+<header>
+<h1>Summary Business Plan <span>2026</span></h1>
+<p>PERISHABLE TOOLS &nbsp;·&nbsp; FY 2026–2027</p>
+</header>
+<div class="section">
+<div class="section-label">📅 Monthly</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="quarter-header">
+<th></th><th colspan="3">Q1</th><th colspan="3">Q2</th><th colspan="3">Q3</th><th colspan="3">Q4</th><th></th>
+</tr>
+<tr>
+<th></th>
+<th class="month-btn" id="perishable-btn-apr26" onclick="window.toggleDetail_perishable('apr26')">Apr-26</th>
+<th class="month-btn" id="perishable-btn-may26" onclick="window.toggleDetail_perishable('may26')">May-26</th>
+<th class="month-btn" id="perishable-btn-jun26" onclick="window.toggleDetail_perishable('jun26')">Jun-26</th>
+<th class="month-btn" id="perishable-btn-jul26" onclick="window.toggleDetail_perishable('jul26')">Jul-26</th>
+<th class="month-btn" id="perishable-btn-aug26" onclick="window.toggleDetail_perishable('aug26')">Aug-26</th>
+<th class="month-btn" id="perishable-btn-sep26" onclick="window.toggleDetail_perishable('sep26')">Sep-26</th>
+<th class="month-btn" id="perishable-btn-oct26" onclick="window.toggleDetail_perishable('oct26')">Oct-26</th>
+<th class="month-btn" id="perishable-btn-nov26" onclick="window.toggleDetail_perishable('nov26')">Nov-26</th>
+<th class="month-btn" id="perishable-btn-dec26" onclick="window.toggleDetail_perishable('dec26')">Dec-26</th>
+<th class="month-btn" id="perishable-btn-jan27" onclick="window.toggleDetail_perishable('jan27')">Jan-27</th>
+<th class="month-btn" id="perishable-btn-feb27" onclick="window.toggleDetail_perishable('feb27')">Feb-27</th>
+<th class="month-btn" id="perishable-btn-mar27" onclick="window.toggleDetail_perishable('mar27')">Mar-27</th>
+<th>TOTAL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="perishable-bp-apr26">$ –</td><td id="perishable-bp-may26">$ –</td><td id="perishable-bp-jun26">$ –</td>
+<td id="perishable-bp-jul26">$ –</td><td id="perishable-bp-aug26">$ –</td><td id="perishable-bp-sep26">$ –</td>
+<td id="perishable-bp-oct26">$ –</td><td id="perishable-bp-nov26">$ –</td><td id="perishable-bp-dec26">$ –</td>
+<td id="perishable-bp-jan27">$ –</td><td id="perishable-bp-feb27">$ –</td><td id="perishable-bp-mar27">$ –</td>
+<td class="total-col bp" id="perishable-bp-total">$ –</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="perishable-fc-apr26">$ –</td><td id="perishable-fc-may26">$ –</td><td id="perishable-fc-jun26">$ –</td>
+<td id="perishable-fc-jul26">$ –</td><td id="perishable-fc-aug26">$ –</td><td id="perishable-fc-sep26">$ –</td>
+<td id="perishable-fc-oct26">$ –</td><td id="perishable-fc-nov26">$ –</td><td id="perishable-fc-dec26">$ –</td>
+<td id="perishable-fc-jan27">$ –</td><td id="perishable-fc-feb27">$ –</td><td id="perishable-fc-mar27">$ –</td>
+<td class="total-col fc" id="perishable-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="perishable-pct-apr26">–</td><td id="perishable-pct-may26">–</td><td id="perishable-pct-jun26">–</td>
+<td id="perishable-pct-jul26">–</td><td id="perishable-pct-aug26">–</td><td id="perishable-pct-sep26">–</td>
+<td id="perishable-pct-oct26">–</td><td id="perishable-pct-nov26">–</td><td id="perishable-pct-dec26">–</td>
+<td id="perishable-pct-jan27">–</td><td id="perishable-pct-feb27">–</td><td id="perishable-pct-mar27">–</td>
+<td class="total-col pct" id="perishable-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label q">📊 Quarterly</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th>Q1</th><th>Q2</th><th>SMT1</th><th>Q3</th><th>Q4</th><th>SMT2</th><th>TOTAL</th></tr></thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="perishable-bp-q1">$ –</td><td id="perishable-bp-q2">$ –</td><td id="perishable-bp-smt1">$ –</td>
+<td id="perishable-bp-q3">$ –</td><td id="perishable-bp-q4">$ –</td><td id="perishable-bp-smt2">$ –</td>
+<td class="total-col bp" id="perishable-bp-total-q">$ –</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="perishable-q-fc-q1">$ –</td><td id="perishable-q-fc-q2">$ –</td><td id="perishable-q-fc-smt1">$ –</td>
+<td id="perishable-q-fc-q3">$ –</td><td id="perishable-q-fc-q4">$ –</td><td id="perishable-q-fc-smt2">$ –</td>
+<td class="total-col fc" id="perishable-q-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="perishable-q-pct-q1">–</td><td id="perishable-q-pct-q2">–</td><td id="perishable-q-pct-smt1">–</td>
+<td id="perishable-q-pct-q3">–</td><td id="perishable-q-pct-q4">–</td><td id="perishable-q-pct-smt2">–</td>
+<td class="total-col pct" id="perishable-q-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label ytd">📈 Year To Date</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>YEARLY</th>
+<th>Apr-26</th><th>May-26</th><th>Jun-26</th><th>Jul-26</th>
+<th>Aug-26</th><th>Sep-26</th><th>Oct-26</th><th>Nov-26</th>
+<th>Dec-26</th><th>Jan-27</th><th>Feb-27</th><th>Mar-27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP</td>
+<td id="perishable-ytdbp-apr26">–</td><td id="perishable-ytdbp-may26">–</td><td id="perishable-ytdbp-jun26">–</td><td id="perishable-ytdbp-jul26">–</td>
+<td id="perishable-ytdbp-aug26">–</td><td id="perishable-ytdbp-sep26">–</td><td id="perishable-ytdbp-oct26">–</td><td id="perishable-ytdbp-nov26">–</td>
+<td id="perishable-ytdbp-dec26">–</td><td id="perishable-ytdbp-jan27">–</td><td id="perishable-ytdbp-feb27">–</td><td id="perishable-ytdbp-mar27">–</td>
+</tr>
+<tr class="row-fc">
+<td>ACTUAL</td>
+<td id="perishable-ytd-apr26">–</td><td id="perishable-ytd-may26">–</td><td id="perishable-ytd-jun26">–</td><td id="perishable-ytd-jul26">–</td>
+<td id="perishable-ytd-aug26">–</td><td id="perishable-ytd-sep26">–</td><td id="perishable-ytd-oct26">–</td><td id="perishable-ytd-nov26">–</td>
+<td id="perishable-ytd-dec26">–</td><td id="perishable-ytd-jan27">–</td><td id="perishable-ytd-feb27">–</td><td id="perishable-ytd-mar27">–</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="perishable-var-apr26">–</td><td id="perishable-var-may26">–</td><td id="perishable-var-jun26">–</td><td id="perishable-var-jul26">–</td>
+<td id="perishable-var-aug26">–</td><td id="perishable-var-sep26">–</td><td id="perishable-var-oct26">–</td><td id="perishable-var-nov26">–</td>
+<td id="perishable-var-dec26">–</td><td id="perishable-var-jan27">–</td><td id="perishable-var-feb27">–</td><td id="perishable-var-mar27">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="repairingmc-dashboard" class="dashboard-page" style="display: none;">
+<div class="upload-trigger">
+<button class="upload-trigger-btn" onclick="document.getElementById('repairingmc-excelInput').click()">⬆ Upload Excel</button>
+<input type="file" id="repairingmc-excelInput" accept=".xlsx,.xls" onchange="window.handleExcel_repairingmc(event)">
+</div>
+<div class="status-bar green" id="repairingmc-statusBar">✅ Ready</div>
+<header>
+<h1>Summary Business Plan <span>2026</span></h1>
+<p>REPAIRING MC &nbsp;·&nbsp; FY 2026–2027</p>
+</header>
+<div class="section">
+<div class="section-label">📅 Monthly</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="quarter-header">
+<th></th><th colspan="3">Q1</th><th colspan="3">Q2</th><th colspan="3">Q3</th><th colspan="3">Q4</th><th></th>
+</tr>
+<tr>
+<th></th>
+<th class="month-btn" id="repairingmc-btn-apr26" onclick="window.toggleDetail_repairingmc('apr26')">Apr-26</th>
+<th class="month-btn" id="repairingmc-btn-may26" onclick="window.toggleDetail_repairingmc('may26')">May-26</th>
+<th class="month-btn" id="repairingmc-btn-jun26" onclick="window.toggleDetail_repairingmc('jun26')">Jun-26</th>
+<th class="month-btn" id="repairingmc-btn-jul26" onclick="window.toggleDetail_repairingmc('jul26')">Jul-26</th>
+<th class="month-btn" id="repairingmc-btn-aug26" onclick="window.toggleDetail_repairingmc('aug26')">Aug-26</th>
+<th class="month-btn" id="repairingmc-btn-sep26" onclick="window.toggleDetail_repairingmc('sep26')">Sep-26</th>
+<th class="month-btn" id="repairingmc-btn-oct26" onclick="window.toggleDetail_repairingmc('oct26')">Oct-26</th>
+<th class="month-btn" id="repairingmc-btn-nov26" onclick="window.toggleDetail_repairingmc('nov26')">Nov-26</th>
+<th class="month-btn" id="repairingmc-btn-dec26" onclick="window.toggleDetail_repairingmc('dec26')">Dec-26</th>
+<th class="month-btn" id="repairingmc-btn-jan27" onclick="window.toggleDetail_repairingmc('jan27')">Jan-27</th>
+<th class="month-btn" id="repairingmc-btn-feb27" onclick="window.toggleDetail_repairingmc('feb27')">Feb-27</th>
+<th class="month-btn" id="repairingmc-btn-mar27" onclick="window.toggleDetail_repairingmc('mar27')">Mar-27</th>
+<th>TOTAL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="repairingmc-bp-apr26">$ –</td><td id="repairingmc-bp-may26">$ –</td><td id="repairingmc-bp-jun26">$ –</td>
+<td id="repairingmc-bp-jul26">$ –</td><td id="repairingmc-bp-aug26">$ –</td><td id="repairingmc-bp-sep26">$ –</td>
+<td id="repairingmc-bp-oct26">$ –</td><td id="repairingmc-bp-nov26">$ –</td><td id="repairingmc-bp-dec26">$ –</td>
+<td id="repairingmc-bp-jan27">$ –</td><td id="repairingmc-bp-feb27">$ –</td><td id="repairingmc-bp-mar27">$ –</td>
+<td class="total-col bp" id="repairingmc-bp-total">$ –</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="repairingmc-fc-apr26">$ –</td><td id="repairingmc-fc-may26">$ –</td><td id="repairingmc-fc-jun26">$ –</td>
+<td id="repairingmc-fc-jul26">$ –</td><td id="repairingmc-fc-aug26">$ –</td><td id="repairingmc-fc-sep26">$ –</td>
+<td id="repairingmc-fc-oct26">$ –</td><td id="repairingmc-fc-nov26">$ –</td><td id="repairingmc-fc-dec26">$ –</td>
+<td id="repairingmc-fc-jan27">$ –</td><td id="repairingmc-fc-feb27">$ –</td><td id="repairingmc-fc-mar27">$ –</td>
+<td class="total-col fc" id="repairingmc-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="repairingmc-pct-apr26">–</td><td id="repairingmc-pct-may26">–</td><td id="repairingmc-pct-jun26">–</td>
+<td id="repairingmc-pct-jul26">–</td><td id="repairingmc-pct-aug26">–</td><td id="repairingmc-pct-sep26">–</td>
+<td id="repairingmc-pct-oct26">–</td><td id="repairingmc-pct-nov26">–</td><td id="repairingmc-pct-dec26">–</td>
+<td id="repairingmc-pct-jan27">–</td><td id="repairingmc-pct-feb27">–</td><td id="repairingmc-pct-mar27">–</td>
+<td class="total-col pct" id="repairingmc-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label q">📊 Quarterly</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th>Q1</th><th>Q2</th><th>SMT1</th><th>Q3</th><th>Q4</th><th>SMT2</th><th>TOTAL</th></tr></thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="repairingmc-bp-q1">$ –</td><td id="repairingmc-bp-q2">$ –</td><td id="repairingmc-bp-smt1">$ –</td>
+<td id="repairingmc-bp-q3">$ –</td><td id="repairingmc-bp-q4">$ –</td><td id="repairingmc-bp-smt2">$ –</td>
+<td class="total-col bp" id="repairingmc-bp-total-q">$ –</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="repairingmc-q-fc-q1">$ –</td><td id="repairingmc-q-fc-q2">$ –</td><td id="repairingmc-q-fc-smt1">$ –</td>
+<td id="repairingmc-q-fc-q3">$ –</td><td id="repairingmc-q-fc-q4">$ –</td><td id="repairingmc-q-fc-smt2">$ –</td>
+<td class="total-col fc" id="repairingmc-q-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="repairingmc-q-pct-q1">–</td><td id="repairingmc-q-pct-q2">–</td><td id="repairingmc-q-pct-smt1">–</td>
+<td id="repairingmc-q-pct-q3">–</td><td id="repairingmc-q-pct-q4">–</td><td id="repairingmc-q-pct-smt2">–</td>
+<td class="total-col pct" id="repairingmc-q-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label ytd">📈 Year To Date</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>YEARLY</th>
+<th>Apr-26</th><th>May-26</th><th>Jun-26</th><th>Jul-26</th>
+<th>Aug-26</th><th>Sep-26</th><th>Oct-26</th><th>Nov-26</th>
+<th>Dec-26</th><th>Jan-27</th><th>Feb-27</th><th>Mar-27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP</td>
+<td id="repairingmc-ytdbp-apr26">–</td><td id="repairingmc-ytdbp-may26">–</td><td id="repairingmc-ytdbp-jun26">–</td><td id="repairingmc-ytdbp-jul26">–</td>
+<td id="repairingmc-ytdbp-aug26">–</td><td id="repairingmc-ytdbp-sep26">–</td><td id="repairingmc-ytdbp-oct26">–</td><td id="repairingmc-ytdbp-nov26">–</td>
+<td id="repairingmc-ytdbp-dec26">–</td><td id="repairingmc-ytdbp-jan27">–</td><td id="repairingmc-ytdbp-feb27">–</td><td id="repairingmc-ytdbp-mar27">–</td>
+</tr>
+<tr class="row-fc">
+<td>ACTUAL</td>
+<td id="repairingmc-ytd-apr26">–</td><td id="repairingmc-ytd-may26">–</td><td id="repairingmc-ytd-jun26">–</td><td id="repairingmc-ytd-jul26">–</td>
+<td id="repairingmc-ytd-aug26">–</td><td id="repairingmc-ytd-sep26">–</td><td id="repairingmc-ytd-oct26">–</td><td id="repairingmc-ytd-nov26">–</td>
+<td id="repairingmc-ytd-dec26">–</td><td id="repairingmc-ytd-jan27">–</td><td id="repairingmc-ytd-feb27">–</td><td id="repairingmc-ytd-mar27">–</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="repairingmc-var-apr26">–</td><td id="repairingmc-var-may26">–</td><td id="repairingmc-var-jun26">–</td><td id="repairingmc-var-jul26">–</td>
+<td id="repairingmc-var-aug26">–</td><td id="repairingmc-var-sep26">–</td><td id="repairingmc-var-oct26">–</td><td id="repairingmc-var-nov26">–</td>
+<td id="repairingmc-var-dec26">–</td><td id="repairingmc-var-jan27">–</td><td id="repairingmc-var-feb27">–</td><td id="repairingmc-var-mar27">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
 <script>
-// ═══════════════════════════════════
-// NAVIGATION (GLOBAL FUNCTIONS)
-// ═══════════════════════════════════
 var currentDashboard = null;
 
 function showDashboard(id) {
@@ -399,9 +779,6 @@ function globalShowToast(msg, type) {
     _toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 4000);
 }
 
-// ═══════════════════════════════════
-// GITHUB AUTO-SAVE
-// ═══════════════════════════════════
 var GITHUB_OWNER  = 'Maul-lana04';
 var GITHUB_REPO   = 'Dashboad';
 var GITHUB_FILE   = 'index.html';
@@ -452,9 +829,6 @@ async function saveToGitHub() {
     }
 }
 
-// ═══════════════════════════════════
-// BUTTON INITIALIZATION
-// ═══════════════════════════════════
 (function() {
     function resetSaveButton() {
         var sb = document.getElementById('save-github-btn');
@@ -473,123 +847,160 @@ async function saveToGitHub() {
     }
 })();
 
-// ═══════════════════════════════════
-// BUILDING DASHBOARD (FIXED)
-// ═══════════════════════════════════
-var appData_building = { months: {} };
-var MONTH_MAP_building = [
-    { key:'apr26', label:'April 2026', bp:null },
-    { key:'may26', label:'May 2026', bp:null },
-    { key:'jun26', label:'June 2026', bp:null },
-    { key:'jul26', label:'July 2026', bp:null },
-    { key:'aug26', label:'August 2026', bp:null },
-    { key:'sep26', label:'September 2026', bp:null },
-    { key:'oct26', label:'October 2026', bp:null },
-    { key:'nov26', label:'November 2026', bp:null },
-    { key:'dec26', label:'December 2026', bp:null },
-    { key:'jan27', label:'January 2027', bp:null },
-    { key:'feb27', label:'February 2027', bp:null },
-    { key:'mar27', label:'March 2027', bp:null },
-];
+var MONTHS = ['apr26','may26','jun26','jul26','aug26','sep26','oct26','nov26','dec26','jan27','feb27','mar27'];
 
-function fmt_building(n) {
-    if (n === null || n === undefined || isNaN(n)) return '$ –';
-    return '$ ' + Number(n).toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:2});
-}
-
-function matchMonth_building(name) {
-    const l = name.toLowerCase();
-    return MONTH_MAP_building.find(m => l.includes(m.key.substring(0,3)));
-}
-
-function handleExcel_building(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    globalShowToast('⏳ Reading ' + file.name + '...', 'yellow');
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        try {
-            const wb = XLSX.read(new Uint8Array(e.target.result), { type: 'array' });
-            const matched = [];
-            wb.SheetNames.forEach(function(sheetName) {
-                const month = matchMonth_building(sheetName);
-                if (!month) return;
-                const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheetName], { defval: '' });
-                if (!rows.length) return;
-                processRows_building(month, rows);
-                matched.push(sheetName);
-            });
-            updateAllUI_building();
-            event.target.value = '';
-            globalShowToast('✅ ' + matched.length + ' month(s) loaded: ' + matched.join(', '), 'green');
-        } catch(err) {
-            globalShowToast('❌ Error: ' + err.message, 'red');
+function createDashboard(prefix) {
+    var appData = { months: {} };
+    var monthBP = {};
+    
+    function fmt(n) {
+        if (n === null || n === undefined || isNaN(n)) return '$ –';
+        return '$ ' + Number(n).toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:2});
+    }
+    
+    function fmtPlain(n) {
+        if (n === null || isNaN(n)) return '–';
+        return Number(n).toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:2});
+    }
+    
+    function matchMonth(name) {
+        const l = name.toLowerCase();
+        for (var i=0; i<MONTHS.length; i++) {
+            if (l.includes(MONTHS[i].substring(0,3))) return MONTHS[i];
         }
-    };
-    reader.readAsArrayBuffer(file);
-}
-
-function processRows_building(month, rows) {
-    const keys = Object.keys(rows[0]);
-    const col = {
-        noReq: keys.find(k => /no.?req/i.test(k)) || keys[0],
-        amount: keys.find(k => /amount|amt/i.test(k)) || keys[6],
-        balance: keys.find(k => /balance|bal/i.test(k)) || keys[7],
-    };
-    var bpValue = null;
-    for (var i=0; i<rows.length; i++) {
-        var bal = parseFloat(String(rows[i][col.balance] || '').replace(/[^0-9.-]/g, ''));
-        if (!isNaN(bal) && bal > 0) { bpValue = bal; break; }
+        return null;
     }
-    if (bpValue !== null) {
-        var mapEntry = MONTH_MAP_building.find(m => m.key === month.key);
-        if (mapEntry) mapEntry.bp = bpValue;
+    
+    function handleExcel(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        globalShowToast('⏳ Reading ' + file.name + '...', 'yellow');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const wb = XLSX.read(new Uint8Array(e.target.result), { type: 'array' });
+                const matched = [];
+                wb.SheetNames.forEach(function(sheetName) {
+                    const month = matchMonth(sheetName);
+                    if (!month) return;
+                    const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheetName], { defval: '' });
+                    if (!rows.length) return;
+                    processRows(month, rows);
+                    matched.push(sheetName);
+                });
+                updateAllUI();
+                event.target.value = '';
+                globalShowToast('✅ ' + matched.length + ' month(s) loaded: ' + matched.join(', '), 'green');
+            } catch(err) {
+                globalShowToast('❌ Error: ' + err.message, 'red');
+            }
+        };
+        reader.readAsArrayBuffer(file);
     }
-    var totalAmt = 0;
-    const cleanRows = rows.filter(r => String(r[col.noReq] || '').trim() && !/^total$/i.test(r[col.noReq])).map(function(r) {
-        const amt = parseFloat(String(r[col.amount] || '').replace(/[^0-9.-]/g, ''));
-        if (!isNaN(amt)) totalAmt += amt;
-        return { noReq: String(r[col.noReq] || ''), amount: isNaN(amt) ? null : amt };
-    });
-    appData_building.months[month.key] = { rows: cleanRows, totalAmt: totalAmt };
-}
-
-function updateAllUI_building() {
-    MONTH_MAP_building.forEach(function(m) {
-        var bpEl = document.getElementById('building-bp-' + m.key);
-        if (bpEl && m.bp) bpEl.textContent = fmt_building(m.bp);
-        const d = appData_building.months[m.key];
-        if (!d) return;
-        var fcEl = document.getElementById('building-fc-' + m.key);
-        var pctEl = document.getElementById('building-pct-' + m.key);
-        if (fcEl) fcEl.textContent = fmt_building(d.totalAmt);
-        if (pctEl && m.bp > 0) pctEl.textContent = Math.round((d.totalAmt / m.bp) * 100) + '%';
-        var btn = document.getElementById('building-btn-' + m.key);
-        if (btn) btn.classList.add('has-data');
-    });
-}
-
-function toggleDetail_building(month) {
-    var panel = document.getElementById('building-detail-' + month);
-    var btn = document.getElementById('building-btn-' + month);
-    if (!panel) return;
-    var isOpen = panel.classList.contains('open');
-    document.querySelectorAll('#building-dashboard .detail-panel').forEach(p => p.classList.remove('open'));
-    document.querySelectorAll('#building-dashboard th.month-btn').forEach(b => b.classList.remove('active'));
-    if (!isOpen) {
-        panel.classList.add('open');
-        if (btn) btn.classList.add('active');
+    
+    function processRows(month, rows) {
+        const keys = Object.keys(rows[0]);
+        const col = {
+            noReq: keys.find(k => /no.?req/i.test(k)) || keys[0],
+            amount: keys.find(k => /amount|amt/i.test(k)) || keys[6],
+            balance: keys.find(k => /balance|bal/i.test(k)) || keys[7],
+        };
+        var bpValue = null;
+        for (var i=0; i<rows.length; i++) {
+            var bal = parseFloat(String(rows[i][col.balance] || '').replace(/[^0-9.-]/g, ''));
+            if (!isNaN(bal) && bal > 0) { bpValue = bal; break; }
+        }
+        if (bpValue !== null) monthBP[month] = bpValue;
+        
+        var totalAmt = 0;
+        const cleanRows = rows.filter(r => String(r[col.noReq] || '').trim() && !/^total$/i.test(r[col.noReq])).map(function(r) {
+            const amt = parseFloat(String(r[col.amount] || '').replace(/[^0-9.-]/g, ''));
+            if (!isNaN(amt)) totalAmt += amt;
+            return { noReq: String(r[col.noReq] || ''), amount: isNaN(amt) ? null : amt };
+        });
+        appData.months[month] = { rows: cleanRows, totalAmt: totalAmt };
     }
+    
+    function updateAllUI() {
+        var cumBP = 0, cumFC = 0;
+        MONTHS.forEach(function(m) {
+            var bpEl = document.getElementById(prefix + '-bp-' + m);
+            if (bpEl && monthBP[m]) {
+                bpEl.textContent = fmt(monthBP[m]);
+                cumBP += monthBP[m];
+            }
+            const d = appData.months[m];
+            if (d) {
+                cumFC += d.totalAmt || 0;
+                var fcEl = document.getElementById(prefix + '-fc-' + m);
+                var pctEl = document.getElementById(prefix + '-pct-' + m);
+                if (fcEl) fcEl.textContent = fmt(d.totalAmt);
+                if (pctEl && monthBP[m] > 0) pctEl.textContent = Math.round((d.totalAmt / monthBP[m]) * 100) + '%';
+                var btn = document.getElementById(prefix + '-btn-' + m);
+                if (btn) btn.classList.add('has-data');
+            }
+            var ytdbp = document.getElementById(prefix + '-ytdbp-' + m);
+            var ytd = document.getElementById(prefix + '-ytd-' + m);
+            var vr = document.getElementById(prefix + '-var-' + m);
+            if (ytdbp) ytdbp.textContent = fmtPlain(cumBP);
+            if (ytd) ytd.textContent = fmtPlain(cumFC);
+            if (vr) vr.textContent = cumBP > 0 ? Math.round((cumFC / cumBP) * 100) + '%' : '–';
+        });
+        
+        function getFC(m) { return appData.months[m] ? appData.months[m].totalAmt : 0; }
+        function getBP(m) { return monthBP[m] || 0; }
+        
+        var q1_fc = getFC('apr26')+getFC('may26')+getFC('jun26');
+        var q2_fc = getFC('jul26')+getFC('aug26')+getFC('sep26');
+        var q3_fc = getFC('oct26')+getFC('nov26')+getFC('dec26');
+        var q4_fc = getFC('jan27')+getFC('feb27')+getFC('mar27');
+        var q1_bp = getBP('apr26')+getBP('may26')+getBP('jun26');
+        var q2_bp = getBP('jul26')+getBP('aug26')+getBP('sep26');
+        var q3_bp = getBP('oct26')+getBP('nov26')+getBP('dec26');
+        var q4_bp = getBP('jan27')+getBP('feb27')+getBP('mar27');
+        var smt1_fc = q1_fc+q2_fc, smt2_fc = q3_fc+q4_fc, total_fc = smt1_fc+smt2_fc;
+        var smt1_bp = q1_bp+q2_bp, smt2_bp = q3_bp+q4_bp, total_bp = smt1_bp+smt2_bp;
+        
+        function setQ(bpId, fcId, pctId, bpVal, fcVal) {
+            var bpEl = document.getElementById(bpId), fcEl = document.getElementById(fcId), pctEl = document.getElementById(pctId);
+            if (bpEl) bpEl.textContent = bpVal > 0 ? fmt(bpVal) : '$ –';
+            if (fcEl) fcEl.textContent = fcVal > 0 ? fmt(fcVal) : '$ –';
+            if (pctEl) pctEl.textContent = bpVal > 0 && fcVal > 0 ? Math.round((fcVal/bpVal)*100) + '%' : '–';
+        }
+        
+        setQ(prefix+'-bp-q1', prefix+'-q-fc-q1', prefix+'-q-pct-q1', q1_bp, q1_fc);
+        setQ(prefix+'-bp-q2', prefix+'-q-fc-q2', prefix+'-q-pct-q2', q2_bp, q2_fc);
+        setQ(prefix+'-bp-smt1', prefix+'-q-fc-smt1', prefix+'-q-pct-smt1', smt1_bp, smt1_fc);
+        setQ(prefix+'-bp-q3', prefix+'-q-fc-q3', prefix+'-q-pct-q3', q3_bp, q3_fc);
+        setQ(prefix+'-bp-q4', prefix+'-q-fc-q4', prefix+'-q-pct-q4', q4_bp, q4_fc);
+        setQ(prefix+'-bp-smt2', prefix+'-q-fc-smt2', prefix+'-q-pct-smt2', smt2_bp, smt2_fc);
+        setQ(prefix+'-bp-total-q', prefix+'-q-fc-total', prefix+'-q-pct-total', total_bp, total_fc);
+        
+        var bpTotals = document.querySelectorAll('[id="'+prefix+'-bp-total"]');
+        bpTotals.forEach(function(el){ el.textContent = total_bp > 0 ? fmt(total_bp) : '$ –'; });
+    }
+    
+    function toggleDetail(month) {
+        var panel = document.getElementById(prefix + '-detail-' + month);
+        var btn = document.getElementById(prefix + '-btn-' + month);
+        if (!panel) return;
+        var isOpen = panel.classList.contains('open');
+        document.querySelectorAll('#' + prefix + '-dashboard .detail-panel').forEach(p => p.classList.remove('open'));
+        document.querySelectorAll('#' + prefix + '-dashboard th.month-btn').forEach(b => b.classList.remove('active'));
+        if (!isOpen) {
+            panel.classList.add('open');
+            if (btn) btn.classList.add('active');
+        }
+    }
+    
+    window['handleExcel_' + prefix] = handleExcel;
+    window['toggleDetail_' + prefix] = toggleDetail;
+    window['updateAllUI_' + prefix] = updateAllUI;
 }
 
-window.handleExcel_building = handleExcel_building;
-window.toggleDetail_building = toggleDetail_building;
-window.updateAllUI_building = updateAllUI_building;
-
-// ═══════════════════════════════════
-// OTHER DASHBOARDS (Same pattern - indirect, perishable, repairingmc)
-// Add similar code for each dashboard following the building pattern above
-// ═══════════════════════════════════
+createDashboard('building');
+createDashboard('indirect');
+createDashboard('perishable');
+createDashboard('repairingmc');
 </script>
-
 </body></html>

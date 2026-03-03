@@ -218,7 +218,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 <!-- ── BACK BUTTON ── -->
 <button class="back-btn visible" id="back-btn" onclick="showMenu()">← Back</button>
-<button id="save-github-btn" onclick="saveToGitHub()" class="visible" disabled="">⏳ Saving...</button>
+<button id="save-github-btn" onclick="saveToGitHub()" class="visible" style="" disabled="">⏳ Saving...</button>
 
 <!-- ── UPLOAD CORNER (shown only when on a dashboard) ── -->
 <div class="upload-trigger" id="upload-corner" style="display: block;">
@@ -574,7 +574,7 @@ window.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 </div>
-<div id="perishable-dashboard" class="dashboard-page" style="display:none">
+<div id="perishable-dashboard" class="dashboard-page" style="display: block;">
 <!-- ── HIDDEN UPLOAD CORNER (only visible on hover) ── -->
 <div class="upload-trigger">
   <button class="upload-trigger-btn" onclick="document.getElementById('perishable-excelInput').click()">
@@ -729,7 +729,7 @@ window.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 </div>
-<div id="repairingmc-dashboard" class="dashboard-page" style="display: block;">
+<div id="repairingmc-dashboard" class="dashboard-page" style="display: none;">
 <!-- ── HIDDEN UPLOAD CORNER (only visible on hover) ── -->
 <div class="upload-trigger">
   <button class="upload-trigger-btn" onclick="document.getElementById('repairingmc-excelInput').click()">

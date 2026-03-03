@@ -289,4 +289,572 @@ box-shadow:0 4px 16px rgba(62,207,142,0.4); transition:all 0.2s;
 <td class="total-col pct" id="building-pct-total">–</td>
 </tr>
 </tbody>
-</
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label q">📊 Quarterly</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th>Q1</th><th>Q2</th><th>SMT1</th><th>Q3</th><th>Q4</th><th>SMT2</th><th>TOTAL</th></tr></thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="building-bp-q1">$ 7,000</td><td id="building-bp-q2">$ 27,000</td><td id="building-bp-smt1">$ 34,000</td>
+<td id="building-bp-q3">$ 17,000</td><td id="building-bp-q4">$ 63,296</td><td id="building-bp-smt2">$ 80,296</td>
+<td class="total-col bp" id="building-bp-total">$ 114,296</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="building-q-fc-q1">$ –</td><td id="building-q-fc-q2">$ –</td><td id="building-q-fc-smt1">$ –</td>
+<td id="building-q-fc-q3">$ –</td><td id="building-q-fc-q4">$ –</td><td id="building-q-fc-smt2">$ –</td>
+<td class="total-col fc" id="building-q-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="building-q-pct-q1">–</td><td id="building-q-pct-q2">–</td><td id="building-q-pct-smt1">–</td>
+<td id="building-q-pct-q3">–</td><td id="building-q-pct-q4">–</td><td id="building-q-pct-smt2">–</td>
+<td class="total-col pct" id="building-q-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label ytd">📈 Year To Date</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>YEARLY</th>
+<th>Apr-26</th><th>May-26</th><th>Jun-26</th><th>Jul-26</th>
+<th>Aug-26</th><th>Sep-26</th><th>Oct-26</th><th>Nov-26</th>
+<th>Dec-26</th><th>Jan-27</th><th>Feb-27</th><th>Mar-27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP</td>
+<td id="building-ytdbp-apr26">0</td><td id="building-ytdbp-may26">0</td><td id="building-ytdbp-jun26">7,000</td><td id="building-ytdbp-jul26">17,000</td>
+<td id="building-ytdbp-aug26">17,000</td><td id="building-ytdbp-sep26">34,000</td><td id="building-ytdbp-oct26">34,000</td><td id="building-ytdbp-nov26">34,000</td>
+<td id="building-ytdbp-dec26">51,000</td><td id="building-ytdbp-jan27">68,000</td><td id="building-ytdbp-feb27">68,000</td><td id="building-ytdbp-mar27">114,296</td>
+</tr>
+<tr class="row-fc">
+<td>ACTUAL</td>
+<td id="building-ytd-apr26">0</td><td id="building-ytd-may26">0</td><td id="building-ytd-jun26">0</td><td id="building-ytd-jul26">0</td>
+<td id="building-ytd-aug26">0</td><td id="building-ytd-sep26">0</td><td id="building-ytd-oct26">0</td><td id="building-ytd-nov26">0</td>
+<td id="building-ytd-dec26">0</td><td id="building-ytd-jan27">0</td><td id="building-ytd-feb27">0</td><td id="building-ytd-mar27">0</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="building-var-apr26">–</td><td id="building-var-may26">–</td><td id="building-var-jun26">0%</td><td id="building-var-jul26">0%</td>
+<td id="building-var-aug26">0%</td><td id="building-var-sep26">0%</td><td id="building-var-oct26">0%</td><td id="building-var-nov26">0%</td>
+<td id="building-var-dec26">0%</td><td id="building-var-jan27">0%</td><td id="building-var-feb27">0%</td><td id="building-var-mar27">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="indirect-dashboard" class="dashboard-page" style="display: none;">
+<div class="upload-trigger">
+<button class="upload-trigger-btn" onclick="document.getElementById('indirect-excelInput').click()">⬆ Upload Excel</button>
+<input type="file" id="indirect-excelInput" accept=".xlsx,.xls" onchange="window.handleExcel_indirect(event)">
+</div>
+<div class="status-bar green" id="indirect-statusBar">✅ 13 month(s) loaded: SUMMARY, APR, MAY, JUNE, JULY, AUG, SEP, OCT, NOV, DEC, JAN 26, FEB 26, MAR 26</div>
+<header>
+<h1>Summary Business Plan <span>2026</span></h1>
+<p>INDIRECT &nbsp;·&nbsp; FY 2026–2027</p>
+</header>
+<div class="section">
+<div class="section-label">📅 Monthly</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="quarter-header">
+<th></th><th colspan="3">Q1</th><th colspan="3">Q2</th><th colspan="3">Q3</th><th colspan="3">Q4</th><th></th>
+</tr>
+<tr>
+<th></th>
+<th class="month-btn has-data" id="indirect-btn-apr26" onclick="window.toggleDetail_indirect('apr26')">Apr-26</th>
+<th class="month-btn has-data" id="indirect-btn-may26" onclick="window.toggleDetail_indirect('may26')">May-26</th>
+<th class="month-btn has-data" id="indirect-btn-jun26" onclick="window.toggleDetail_indirect('jun26')">Jun-26</th>
+<th class="month-btn has-data" id="indirect-btn-jul26" onclick="window.toggleDetail_indirect('jul26')">Jul-26</th>
+<th class="month-btn has-data" id="indirect-btn-aug26" onclick="window.toggleDetail_indirect('aug26')">Aug-26</th>
+<th class="month-btn has-data" id="indirect-btn-sep26" onclick="window.toggleDetail_indirect('sep26')">Sep-26</th>
+<th class="month-btn has-data" id="indirect-btn-oct26" onclick="window.toggleDetail_indirect('oct26')">Oct-26</th>
+<th class="month-btn has-data" id="indirect-btn-nov26" onclick="window.toggleDetail_indirect('nov26')">Nov-26</th>
+<th class="month-btn has-data" id="indirect-btn-dec26" onclick="window.toggleDetail_indirect('dec26')">Dec-26</th>
+<th class="month-btn has-data" id="indirect-btn-jan27" onclick="window.toggleDetail_indirect('jan27')">Jan-27</th>
+<th class="month-btn has-data" id="indirect-btn-feb27" onclick="window.toggleDetail_indirect('feb27')">Feb-27</th>
+<th class="month-btn has-data" id="indirect-btn-mar27" onclick="window.toggleDetail_indirect('mar27')">Mar-27</th>
+<th>TOTAL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="indirect-bp-apr26">$ 4,797</td><td id="indirect-bp-may26">$ 1,001</td><td id="indirect-bp-jun26">$ 8,605.6</td>
+<td id="indirect-bp-jul26">$ 3,406.63</td><td id="indirect-bp-aug26">$ 5,553.01</td><td id="indirect-bp-sep26">$ 5,028.01</td>
+<td id="indirect-bp-oct26">$ 5,542.3</td><td id="indirect-bp-nov26">$ 4,968.01</td><td id="indirect-bp-dec26">$ 5,028.66</td>
+<td id="indirect-bp-jan27">$ 4,428</td><td id="indirect-bp-feb27">$ 4,718</td><td id="indirect-bp-mar27">$ 4,403</td>
+<td class="total-col bp" id="indirect-bp-total">$ 57,479.21</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="indirect-fc-apr26">$ 0</td><td id="indirect-fc-may26">$ 0</td><td id="indirect-fc-jun26">$ 0</td>
+<td id="indirect-fc-jul26">$ 0</td><td id="indirect-fc-aug26">$ 0</td><td id="indirect-fc-sep26">$ 0</td>
+<td id="indirect-fc-oct26">$ 0</td><td id="indirect-fc-nov26">$ 0</td><td id="indirect-fc-dec26">$ 0</td>
+<td id="indirect-fc-jan27">$ 0</td><td id="indirect-fc-feb27">$ 0</td><td id="indirect-fc-mar27">$ 0</td>
+<td class="total-col fc" id="indirect-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="indirect-pct-apr26">0%</td><td id="indirect-pct-may26">0%</td><td id="indirect-pct-jun26">0%</td>
+<td id="indirect-pct-jul26">0%</td><td id="indirect-pct-aug26">0%</td><td id="indirect-pct-sep26">0%</td>
+<td id="indirect-pct-oct26">0%</td><td id="indirect-pct-nov26">0%</td><td id="indirect-pct-dec26">0%</td>
+<td id="indirect-pct-jan27">0%</td><td id="indirect-pct-feb27">0%</td><td id="indirect-pct-mar27">0%</td>
+<td class="total-col pct" id="indirect-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label q">📊 Quarterly</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th>Q1</th><th>Q2</th><th>SMT1</th><th>Q3</th><th>Q4</th><th>SMT2</th><th>TOTAL</th></tr></thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="indirect-bp-q1">$ 14,403.6</td><td id="indirect-bp-q2">$ 13,987.65</td><td id="indirect-bp-smt1">$ 28,391.25</td>
+<td id="indirect-bp-q3">$ 15,538.96</td><td id="indirect-bp-q4">$ 13,549</td><td id="indirect-bp-smt2">$ 29,087.96</td>
+<td class="total-col bp" id="indirect-bp-total">$ 57,479.21</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="indirect-q-fc-q1">$ –</td><td id="indirect-q-fc-q2">$ –</td><td id="indirect-q-fc-smt1">$ –</td>
+<td id="indirect-q-fc-q3">$ –</td><td id="indirect-q-fc-q4">$ –</td><td id="indirect-q-fc-smt2">$ –</td>
+<td class="total-col fc" id="indirect-q-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="indirect-q-pct-q1">–</td><td id="indirect-q-pct-q2">–</td><td id="indirect-q-pct-smt1">–</td>
+<td id="indirect-q-pct-q3">–</td><td id="indirect-q-pct-q4">–</td><td id="indirect-q-pct-smt2">–</td>
+<td class="total-col pct" id="indirect-q-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label ytd">📈 Year To Date</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>YEARLY</th>
+<th>Apr-26</th><th>May-26</th><th>Jun-26</th><th>Jul-26</th>
+<th>Aug-26</th><th>Sep-26</th><th>Oct-26</th><th>Nov-26</th>
+<th>Dec-26</th><th>Jan-27</th><th>Feb-27</th><th>Mar-27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP</td>
+<td id="indirect-ytdbp-apr26">4,797</td><td id="indirect-ytdbp-may26">5,798</td><td id="indirect-ytdbp-jun26">14,403.6</td><td id="indirect-ytdbp-jul26">17,810.23</td>
+<td id="indirect-ytdbp-aug26">23,363.24</td><td id="indirect-ytdbp-sep26">28,391.25</td><td id="indirect-ytdbp-oct26">33,933.54</td><td id="indirect-ytdbp-nov26">38,901.55</td>
+<td id="indirect-ytdbp-dec26">43,930.21</td><td id="indirect-ytdbp-jan27">48,358.21</td><td id="indirect-ytdbp-feb27">53,076.21</td><td id="indirect-ytdbp-mar27">57,479.21</td>
+</tr>
+<tr class="row-fc">
+<td>ACTUAL</td>
+<td id="indirect-ytd-apr26">0</td><td id="indirect-ytd-may26">0</td><td id="indirect-ytd-jun26">0</td><td id="indirect-ytd-jul26">0</td>
+<td id="indirect-ytd-aug26">0</td><td id="indirect-ytd-sep26">0</td><td id="indirect-ytd-oct26">0</td><td id="indirect-ytd-nov26">0</td>
+<td id="indirect-ytd-dec26">0</td><td id="indirect-ytd-jan27">0</td><td id="indirect-ytd-feb27">0</td><td id="indirect-ytd-mar27">0</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="indirect-var-apr26">0%</td><td id="indirect-var-may26">0%</td><td id="indirect-var-jun26">0%</td><td id="indirect-var-jul26">0%</td>
+<td id="indirect-var-aug26">0%</td><td id="indirect-var-sep26">0%</td><td id="indirect-var-oct26">0%</td><td id="indirect-var-nov26">0%</td>
+<td id="indirect-var-dec26">0%</td><td id="indirect-var-jan27">0%</td><td id="indirect-var-feb27">0%</td><td id="indirect-var-mar27">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="perishable-dashboard" class="dashboard-page" style="display: none;">
+<div class="upload-trigger">
+<button class="upload-trigger-btn" onclick="document.getElementById('perishable-excelInput').click()">⬆ Upload Excel</button>
+<input type="file" id="perishable-excelInput" accept=".xlsx,.xls" onchange="window.handleExcel_perishable(event)">
+</div>
+<div class="status-bar green" id="perishable-statusBar">✅ 13 month(s) loaded: SUMMARY, APR, MAY, JUNE, JULY, AUG, SEP, OCT, NOV, DEC, JAN, FEB, MAR</div>
+<header>
+<h1>Summary Business Plan <span>2026</span></h1>
+<p>PERISHABLE TOOLS &nbsp;·&nbsp; FY 2026–2027</p>
+</header>
+<div class="section">
+<div class="section-label">📅 Monthly</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="quarter-header">
+<th></th><th colspan="3">Q1</th><th colspan="3">Q2</th><th colspan="3">Q3</th><th colspan="3">Q4</th><th></th>
+</tr>
+<tr>
+<th></th>
+<th class="month-btn has-data" id="perishable-btn-apr26" onclick="window.toggleDetail_perishable('apr26')">Apr-26</th>
+<th class="month-btn has-data" id="perishable-btn-may26" onclick="window.toggleDetail_perishable('may26')">May-26</th>
+<th class="month-btn has-data" id="perishable-btn-jun26" onclick="window.toggleDetail_perishable('jun26')">Jun-26</th>
+<th class="month-btn has-data" id="perishable-btn-jul26" onclick="window.toggleDetail_perishable('jul26')">Jul-26</th>
+<th class="month-btn has-data" id="perishable-btn-aug26" onclick="window.toggleDetail_perishable('aug26')">Aug-26</th>
+<th class="month-btn has-data" id="perishable-btn-sep26" onclick="window.toggleDetail_perishable('sep26')">Sep-26</th>
+<th class="month-btn has-data" id="perishable-btn-oct26" onclick="window.toggleDetail_perishable('oct26')">Oct-26</th>
+<th class="month-btn has-data" id="perishable-btn-nov26" onclick="window.toggleDetail_perishable('nov26')">Nov-26</th>
+<th class="month-btn has-data" id="perishable-btn-dec26" onclick="window.toggleDetail_perishable('dec26')">Dec-26</th>
+<th class="month-btn has-data" id="perishable-btn-jan27" onclick="window.toggleDetail_perishable('jan27')">Jan-27</th>
+<th class="month-btn has-data" id="perishable-btn-feb27" onclick="window.toggleDetail_perishable('feb27')">Feb-27</th>
+<th class="month-btn has-data" id="perishable-btn-mar27" onclick="window.toggleDetail_perishable('mar27')">Mar-27</th>
+<th>TOTAL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="perishable-bp-apr26">$ 205</td><td id="perishable-bp-may26">$ 1,334</td><td id="perishable-bp-jun26">$ 1,077</td>
+<td id="perishable-bp-jul26">$ 622.72</td><td id="perishable-bp-aug26">$ 4,652.18</td><td id="perishable-bp-sep26">$ 4,804.11</td>
+<td id="perishable-bp-oct26">$ 12,916.16</td><td id="perishable-bp-nov26">$ 4,734.85</td><td id="perishable-bp-dec26">$ 5,978.23</td>
+<td id="perishable-bp-jan27">$ 12,939</td><td id="perishable-bp-feb27">$ 4,718</td><td id="perishable-bp-mar27">$ 4,697</td>
+<td class="total-col bp" id="perishable-bp-total">$ 58,678.26</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="perishable-fc-apr26">$ 0</td><td id="perishable-fc-may26">$ 0</td><td id="perishable-fc-jun26">$ 0</td>
+<td id="perishable-fc-jul26">$ 0</td><td id="perishable-fc-aug26">$ 0</td><td id="perishable-fc-sep26">$ 0</td>
+<td id="perishable-fc-oct26">$ 0</td><td id="perishable-fc-nov26">$ 0</td><td id="perishable-fc-dec26">$ 0</td>
+<td id="perishable-fc-jan27">$ 0</td><td id="perishable-fc-feb27">$ 0</td><td id="perishable-fc-mar27">$ 0</td>
+<td class="total-col fc" id="perishable-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="perishable-pct-apr26">0%</td><td id="perishable-pct-may26">0%</td><td id="perishable-pct-jun26">0%</td>
+<td id="perishable-pct-jul26">0%</td><td id="perishable-pct-aug26">0%</td><td id="perishable-pct-sep26">0%</td>
+<td id="perishable-pct-oct26">0%</td><td id="perishable-pct-nov26">0%</td><td id="perishable-pct-dec26">0%</td>
+<td id="perishable-pct-jan27">0%</td><td id="perishable-pct-feb27">0%</td><td id="perishable-pct-mar27">0%</td>
+<td class="total-col pct" id="perishable-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label q">📊 Quarterly</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th>Q1</th><th>Q2</th><th>SMT1</th><th>Q3</th><th>Q4</th><th>SMT2</th><th>TOTAL</th></tr></thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="perishable-bp-q1">$ 2,616</td><td id="perishable-bp-q2">$ 10,079.02</td><td id="perishable-bp-smt1">$ 12,695.02</td>
+<td id="perishable-bp-q3">$ 23,629.24</td><td id="perishable-bp-q4">$ 22,354</td><td id="perishable-bp-smt2">$ 45,983.24</td>
+<td class="total-col bp" id="perishable-bp-total">$ 58,678.26</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="perishable-q-fc-q1">$ –</td><td id="perishable-q-fc-q2">$ –</td><td id="perishable-q-fc-smt1">$ –</td>
+<td id="perishable-q-fc-q3">$ –</td><td id="perishable-q-fc-q4">$ –</td><td id="perishable-q-fc-smt2">$ –</td>
+<td class="total-col fc" id="perishable-q-fc-total">$ –</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="perishable-q-pct-q1">–</td><td id="perishable-q-pct-q2">–</td><td id="perishable-q-pct-smt1">–</td>
+<td id="perishable-q-pct-q3">–</td><td id="perishable-q-pct-q4">–</td><td id="perishable-q-pct-smt2">–</td>
+<td class="total-col pct" id="perishable-q-pct-total">–</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label ytd">📈 Year To Date</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>YEARLY</th>
+<th>Apr-26</th><th>May-26</th><th>Jun-26</th><th>Jul-26</th>
+<th>Aug-26</th><th>Sep-26</th><th>Oct-26</th><th>Nov-26</th>
+<th>Dec-26</th><th>Jan-27</th><th>Feb-27</th><th>Mar-27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP</td>
+<td id="perishable-ytdbp-apr26">205</td><td id="perishable-ytdbp-may26">1,539</td><td id="perishable-ytdbp-jun26">2,616</td><td id="perishable-ytdbp-jul26">3,238.72</td>
+<td id="perishable-ytdbp-aug26">7,890.91</td><td id="perishable-ytdbp-sep26">12,695.02</td><td id="perishable-ytdbp-oct26">25,611.18</td><td id="perishable-ytdbp-nov26">30,346.03</td>
+<td id="perishable-ytdbp-dec26">36,324.26</td><td id="perishable-ytdbp-jan27">49,263.26</td><td id="perishable-ytdbp-feb27">53,981.26</td><td id="perishable-ytdbp-mar27">58,678.26</td>
+</tr>
+<tr class="row-fc">
+<td>ACTUAL</td>
+<td id="perishable-ytd-apr26">0</td><td id="perishable-ytd-may26">0</td><td id="perishable-ytd-jun26">0</td><td id="perishable-ytd-jul26">0</td>
+<td id="perishable-ytd-aug26">0</td><td id="perishable-ytd-sep26">0</td><td id="perishable-ytd-oct26">0</td><td id="perishable-ytd-nov26">0</td>
+<td id="perishable-ytd-dec26">0</td><td id="perishable-ytd-jan27">0</td><td id="perishable-ytd-feb27">0</td><td id="perishable-ytd-mar27">0</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="perishable-var-apr26">0%</td><td id="perishable-var-may26">0%</td><td id="perishable-var-jun26">0%</td><td id="perishable-var-jul26">0%</td>
+<td id="perishable-var-aug26">0%</td><td id="perishable-var-sep26">0%</td><td id="perishable-var-oct26">0%</td><td id="perishable-var-nov26">0%</td>
+<td id="perishable-var-dec26">0%</td><td id="perishable-var-jan27">0%</td><td id="perishable-var-feb27">0%</td><td id="perishable-var-mar27">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="repairingmc-dashboard" class="dashboard-page" style="display: none;">
+<div class="upload-trigger">
+<button class="upload-trigger-btn" onclick="document.getElementById('repairingmc-excelInput').click()">⬆ Upload Excel</button>
+<input type="file" id="repairingmc-excelInput" accept=".xlsx,.xls" onchange="window.handleExcel_repairingmc(event)">
+</div>
+<div class="status-bar green" id="repairingmc-statusBar">✅ 13 month(s) loaded: SUMMARY, APR, MAY, JUNE, JULY, AUG, SEP, OCT, NOV, DEC, JAN, FEB, MAR</div>
+<header>
+<h1>Summary Business Plan <span>2026</span></h1>
+<p>REPAIRING MC &nbsp;·&nbsp; FY 2026–2027</p>
+</header>
+<div class="section">
+<div class="section-label">📅 Monthly</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="quarter-header">
+<th></th><th colspan="3">Q1</th><th colspan="3">Q2</th><th colspan="3">Q3</th><th colspan="3">Q4</th><th></th>
+</tr>
+<tr>
+<th></th>
+<th class="month-btn has-data" id="repairingmc-btn-apr26" onclick="window.toggleDetail_repairingmc('apr26')">Apr-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-may26" onclick="window.toggleDetail_repairingmc('may26')">May-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-jun26" onclick="window.toggleDetail_repairingmc('jun26')">Jun-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-jul26" onclick="window.toggleDetail_repairingmc('jul26')">Jul-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-aug26" onclick="window.toggleDetail_repairingmc('aug26')">Aug-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-sep26" onclick="window.toggleDetail_repairingmc('sep26')">Sep-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-oct26" onclick="window.toggleDetail_repairingmc('oct26')">Oct-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-nov26" onclick="window.toggleDetail_repairingmc('nov26')">Nov-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-dec26" onclick="window.toggleDetail_repairingmc('dec26')">Dec-26</th>
+<th class="month-btn has-data" id="repairingmc-btn-jan27" onclick="window.toggleDetail_repairingmc('jan27')">Jan-27</th>
+<th class="month-btn has-data" id="repairingmc-btn-feb27" onclick="window.toggleDetail_repairingmc('feb27')">Feb-27</th>
+<th class="month-btn has-data" id="repairingmc-btn-mar27" onclick="window.toggleDetail_repairingmc('mar27')">Mar-27</th>
+<th>TOTAL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="repairingmc-bp-apr26">$ 48,570</td><td id="repairingmc-bp-may26">$ 38,478.96</td><td id="repairingmc-bp-jun26">$ 19,167.33</td>
+<td id="repairingmc-bp-jul26">$ 40,713.16</td><td id="repairingmc-bp-aug26">$ 37,690.29</td><td id="repairingmc-bp-sep26">$ 52,238.37</td>
+<td id="repairingmc-bp-oct26">$ 29,270</td><td id="repairingmc-bp-nov26">$ 66,451.47</td><td id="repairingmc-bp-dec26">$ 64,009.29</td>
+<td id="repairingmc-bp-jan27">$ 70,596.24</td><td id="repairingmc-bp-feb27">$ 23,524.29</td><td id="repairingmc-bp-mar27">$ 36,438.41</td>
+<td class="total-col bp" id="repairingmc-bp-total">$ 527,147.8</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="repairingmc-fc-apr26">$ 33,838.64</td><td id="repairingmc-fc-may26">$ 6,652</td><td id="repairingmc-fc-jun26">$ 0</td>
+<td id="repairingmc-fc-jul26">$ 927.32</td><td id="repairingmc-fc-aug26">$ 0</td><td id="repairingmc-fc-sep26">$ 0</td>
+<td id="repairingmc-fc-oct26">$ 0</td><td id="repairingmc-fc-nov26">$ 0</td><td id="repairingmc-fc-dec26">$ 0</td>
+<td id="repairingmc-fc-jan27">$ 0</td><td id="repairingmc-fc-feb27">$ 0</td><td id="repairingmc-fc-mar27">$ 0</td>
+<td class="total-col fc" id="repairingmc-fc-total">$ 41,417.96</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="repairingmc-pct-apr26">70%</td><td id="repairingmc-pct-may26">17%</td><td id="repairingmc-pct-jun26">0%</td>
+<td id="repairingmc-pct-jul26">2%</td><td id="repairingmc-pct-aug26">0%</td><td id="repairingmc-pct-sep26">0%</td>
+<td id="repairingmc-pct-oct26">0%</td><td id="repairingmc-pct-nov26">0%</td><td id="repairingmc-pct-dec26">0%</td>
+<td id="repairingmc-pct-jan27">0%</td><td id="repairingmc-pct-feb27">0%</td><td id="repairingmc-pct-mar27">0%</td>
+<td class="total-col pct" id="repairingmc-pct-total">8%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label q">📊 Quarterly</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th></th><th>Q1</th><th>Q2</th><th>SMT1</th><th>Q3</th><th>Q4</th><th>SMT2</th><th>TOTAL</th></tr></thead>
+<tbody>
+<tr class="row-bp">
+<td>BP 2026</td>
+<td id="repairingmc-bp-q1">$ 106,216.29</td><td id="repairingmc-bp-q2">$ 130,641.82</td><td id="repairingmc-bp-smt1">$ 236,858.11</td>
+<td id="repairingmc-bp-q3">$ 159,730.76</td><td id="repairingmc-bp-q4">$ 130,558.94</td><td id="repairingmc-bp-smt2">$ 290,289.7</td>
+<td class="total-col bp" id="repairingmc-bp-total">$ 527,147.8</td>
+</tr>
+<tr class="row-fc">
+<td>FC/ACTUAL</td>
+<td id="repairingmc-q-fc-q1">$ 40,490.64</td><td id="repairingmc-q-fc-q2">$ 927.32</td><td id="repairingmc-q-fc-smt1">$ 41,417.96</td>
+<td id="repairingmc-q-fc-q3">$ –</td><td id="repairingmc-q-fc-q4">$ –</td><td id="repairingmc-q-fc-smt2">$ –</td>
+<td class="total-col fc" id="repairingmc-q-fc-total">$ 41,417.96</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="repairingmc-q-pct-q1">38%</td><td id="repairingmc-q-pct-q2">1%</td><td id="repairingmc-q-pct-smt1">17%</td>
+<td id="repairingmc-q-pct-q3">–</td><td id="repairingmc-q-pct-q4">–</td><td id="repairingmc-q-pct-smt2">–</td>
+<td class="total-col pct" id="repairingmc-q-pct-total">8%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section">
+<div class="section-label ytd">📈 Year To Date</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>YEARLY</th>
+<th>Apr-26</th><th>May-26</th><th>Jun-26</th><th>Jul-26</th>
+<th>Aug-26</th><th>Sep-26</th><th>Oct-26</th><th>Nov-26</th>
+<th>Dec-26</th><th>Jan-27</th><th>Feb-27</th><th>Mar-27</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-bp">
+<td>BP</td>
+<td id="repairingmc-ytdbp-apr26">48,570</td><td id="repairingmc-ytdbp-may26">87,048.96</td><td id="repairingmc-ytdbp-jun26">106,216.29</td><td id="repairingmc-ytdbp-jul26">146,929.44</td>
+<td id="repairingmc-ytdbp-aug26">184,619.73</td><td id="repairingmc-ytdbp-sep26">236,858.11</td><td id="repairingmc-ytdbp-oct26">266,128.11</td><td id="repairingmc-ytdbp-nov26">332,579.57</td>
+<td id="repairingmc-ytdbp-dec26">396,588.86</td><td id="repairingmc-ytdbp-jan27">467,185.11</td><td id="repairingmc-ytdbp-feb27">490,709.4</td><td id="repairingmc-ytdbp-mar27">527,147.8</td>
+</tr>
+<tr class="row-fc">
+<td>ACTUAL</td>
+<td id="repairingmc-ytd-apr26">33,838.64</td><td id="repairingmc-ytd-may26">40,490.64</td><td id="repairingmc-ytd-jun26">40,490.64</td><td id="repairingmc-ytd-jul26">41,417.96</td>
+<td id="repairingmc-ytd-aug26">41,417.96</td><td id="repairingmc-ytd-sep26">41,417.96</td><td id="repairingmc-ytd-oct26">41,417.96</td><td id="repairingmc-ytd-nov26">41,417.96</td>
+<td id="repairingmc-ytd-dec26">41,417.96</td><td id="repairingmc-ytd-jan27">41,417.96</td><td id="repairingmc-ytd-feb27">41,417.96</td><td id="repairingmc-ytd-mar27">41,417.96</td>
+</tr>
+<tr class="row-pct">
+<td>PERCENTAGE</td>
+<td id="repairingmc-var-apr26">70%</td><td id="repairingmc-var-may26">47%</td><td id="repairingmc-var-jun26">38%</td><td id="repairingmc-var-jul26">28%</td>
+<td id="repairingmc-var-aug26">22%</td><td id="repairingmc-var-sep26">17%</td><td id="repairingmc-var-oct26">16%</td><td id="repairingmc-var-nov26">12%</td>
+<td id="repairingmc-var-dec26">10%</td><td id="repairingmc-var-jan27">9%</td><td id="repairingmc-var-feb27">8%</td><td id="repairingmc-var-mar27">8%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script>
+// ═══════════════════════════════════
+// NAVIGATION (GLOBAL FUNCTIONS)
+// ═══════════════════════════════════
+var currentDashboard = null;
+
+function showDashboard(id) {
+    document.getElementById('menu-page').style.display = 'none';
+    document.querySelectorAll('.dashboard-page').forEach(function(p){ p.style.display='none'; });
+    document.getElementById(id + '-dashboard').style.display = 'block';
+    document.getElementById('back-btn').classList.add('visible');
+    var corner = document.getElementById('upload-corner');
+    corner.style.display = 'block';
+    document.getElementById('upload-corner-btn').onclick = function() {
+        document.getElementById(id + '-excelInput').click();
+    };
+    currentDashboard = id;
+    window.scrollTo(0,0);
+    var sb = document.getElementById('save-github-btn');
+    if(sb) sb.classList.add('visible');
+}
+
+function showMenu() {
+    document.querySelectorAll('.dashboard-page').forEach(function(p){ p.style.display='none'; });
+    document.getElementById('menu-page').style.display = 'flex';
+    document.getElementById('back-btn').classList.remove('visible');
+    document.getElementById('upload-corner').style.display = 'none';
+    currentDashboard = null;
+    window.scrollTo(0,0);
+    var sb = document.getElementById('save-github-btn');
+    if(sb) sb.classList.remove('visible');
+}
+
+var _toastTimer;
+function globalShowToast(msg, type) {
+    var t = document.getElementById('global-statusBar');
+    t.textContent = msg;
+    t.className = 'status-bar ' + (type||'') + ' show';
+    clearTimeout(_toastTimer);
+    _toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 4000);
+}
+
+// ═══════════════════════════════════
+// GITHUB AUTO-SAVE
+// ═══════════════════════════════════
+var GITHUB_OWNER  = 'Maul-lana04';
+var GITHUB_REPO   = 'Dashboad';
+var GITHUB_FILE   = 'index.html';
+var GITHUB_BRANCH = 'main';
+
+function getToken() {
+    var t = localStorage.getItem('gh_token');
+    if (!t) {
+        t = prompt('Enter your GitHub Personal Access Token:');
+        if (t) localStorage.setItem('gh_token', t.trim());
+    }
+    return t ? t.trim() : null;
+}
+
+async function saveToGitHub() {
+    var btn = document.getElementById('save-github-btn');
+    var token = getToken();
+    if (!token) return;
+    btn.textContent = '⏳ Saving...';
+    btn.disabled = true;
+    try {
+        var getRes = await fetch(
+            'https://api.github.com/repos/'+GITHUB_OWNER+'/'+GITHUB_REPO+'/contents/'+GITHUB_FILE,
+            { headers: { 'Authorization': 'token '+token, 'Accept': 'application/vnd.github.v3+json' } }
+        );
+        if (!getRes.ok) { localStorage.removeItem('gh_token'); throw new Error('Token invalid - cleared'); }
+        var sha = (await getRes.json()).sha;
+        var html = document.documentElement.outerHTML;
+        var putRes = await fetch(
+            'https://api.github.com/repos/'+GITHUB_OWNER+'/'+GITHUB_REPO+'/contents/'+GITHUB_FILE,
+            {
+                method: 'PUT',
+                headers: { 'Authorization': 'token '+token, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: 'Update dashboard data', content: btoa(unescape(encodeURIComponent(html))), sha: sha, branch: GITHUB_BRANCH })
+            }
+        );
+        if (putRes.ok) {
+            btn.textContent = '✅ Saved!';
+            btn.style.background = '#3ecf8e'; btn.style.color = '#0d0f1a';
+            setTimeout(function(){ btn.textContent='💾 Save'; btn.style.background=''; btn.style.color=''; btn.disabled=false; }, 3000);
+        } else {
+            throw new Error((await putRes.json()).message || 'Failed');
+        }
+    } catch(e) {
+        btn.textContent = '❌ '+e.message;
+        btn.style.background = '#f05252'; btn.style.color = '#fff';
+        setTimeout(function(){ btn.textContent='💾 Save'; btn.style.background=''; btn.style.color=''; btn.disabled=false; }, 5000);
+    }
+}
+
+// ═══════════════════════════════════
+// BUTTON INITIALIZATION (runs after DOM ready)
+// ═══════════════════════════════════
+(function() {
+    function resetSaveButton() {
+        var sb = document.getElementById('save-github-btn');
+        if (sb) {
+            sb.textContent = '💾 Save';
+            sb.style.background = '';
+            sb.style.color = '';
+            sb.disabled = false;
+            sb.classList.remove('visible');
+        }
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', resetSaveButton);
+    } else {
+        resetSaveButton();
+    }
+})();
+</script>
+<!-- DASHBOARD SCRIPTS WILL BE ADDED SEPARATELY TO KEEP FILE MANAGEABLE -->
+</body></html>

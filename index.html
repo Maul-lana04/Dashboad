@@ -956,10 +956,10 @@ async function saveToGitHub() {
   var btn = document.getElementById('save-github-btn');
   var token = getToken();
   if (!token) return;
-  btn.textContent = '⏳ Saving...';
+  btn.textContent = '\u23f3 Saving...';
   btn.disabled = true;
   try {
-    // 1. Get current file SHA
+    // 1. Get SHA
     var getRes = await fetch(
       'https://api.github.com/repos/'+GITHUB_OWNER+'/'+GITHUB_REPO+'/contents/'+GITHUB_FILE,
       { headers: { 'Authorization': 'token '+token, 'Accept': 'application/vnd.github.v3+json' } }
@@ -967,7 +967,7 @@ async function saveToGitHub() {
     if (!getRes.ok) { localStorage.removeItem('gh_token'); throw new Error('Token invalid - try again'); }
     var sha = (await getRes.json()).sha;
 
-    // 2. Collect all dashboard data into a JSON blob
+    // 2. Collect data
     var allData = {};
     ['building','indirect','perishable','repairingmc'].forEach(function(p) {
       var ad = window['appData_' + p];
@@ -978,25 +978,33 @@ async function saveToGitHub() {
       }
     });
 
-    // 3. Temporarily reset button in DOM before capturing HTML
-    btn.textContent = '💾 Save';
-    btn.disabled = false;
-    btn.style.background = '';
-    btn.style.color = '';
-    btn.classList.remove('visible');
+    // 3. Build clean HTML from scratch using template
+    // Get the base HTML (without the data script and with clean button)
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(document.documentElement.outerHTML, 'text/html');
 
-    // Capture clean HTML
-    var html = document.documentElement.outerHTML;
+    // Reset save button in the parsed doc
+    var saveBtn = doc.getElementById('save-github-btn');
+    if (saveBtn) {
+      saveBtn.textContent = '\ud83d\udcbe Save';
+      saveBtn.removeAttribute('disabled');
+      saveBtn.style.background = '';
+      saveBtn.style.color = '';
+      saveBtn.classList.remove('visible');
+    }
 
-    // Restore saving state visually
-    btn.textContent = '⏳ Saving...';
-    btn.disabled = true;
-    btn.classList.add('visible');
+    // Remove old data script
+    var oldScript = doc.getElementById('__dashboard_data__');
+    if (oldScript) oldScript.remove();
 
-    // Strip old data script, inject fresh one
-    html = html.replace(/<script id="__dashboard_data__">[\s\S]*?<\/script>/, '');
-    var dataScript = '<script id="__dashboard_data__">window.__DASHBOARD_DATA__ = ' + JSON.stringify(allData) + ';<\/script>';
-    html = html.replace('</head>', dataScript + '</head>');
+    // Inject new data script
+    var dataScript = doc.createElement('script');
+    dataScript.id = '__dashboard_data__';
+    dataScript.textContent = 'window.__DASHBOARD_DATA__ = ' + JSON.stringify(allData) + ';';
+    doc.head.appendChild(dataScript);
+
+    // Serialize back to string
+    var html = '<!DOCTYPE html>\n' + doc.documentElement.outerHTML;
 
     // 4. Push to GitHub
     var putRes = await fetch(
@@ -1008,16 +1016,16 @@ async function saveToGitHub() {
       }
     );
     if (putRes.ok) {
-      btn.textContent = '✅ Saved!';
+      btn.textContent = '\u2705 Saved!';
       btn.style.background = '#3ecf8e'; btn.style.color = '#0d0f1a';
-      setTimeout(function(){ btn.textContent='💾 Save'; btn.style.background=''; btn.style.color=''; btn.disabled=false; }, 3000);
+      setTimeout(function(){ btn.textContent='\ud83d\udcbe Save'; btn.style.background=''; btn.style.color=''; btn.disabled=false; }, 3000);
     } else {
       throw new Error((await putRes.json()).message || 'Push failed');
     }
   } catch(e) {
-    btn.textContent = '❌ '+e.message;
+    btn.textContent = '\u274c '+e.message;
     btn.style.background = '#f05252'; btn.style.color = '#fff';
-    setTimeout(function(){ btn.textContent='💾 Save'; btn.style.background=''; btn.style.color=''; btn.disabled=false; }, 5000);
+    setTimeout(function(){ btn.textContent='\ud83d\udcbe Save'; btn.style.background=''; btn.style.color=''; btn.disabled=false; }, 5000);
   }
 }
 
